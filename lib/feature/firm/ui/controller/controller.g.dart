@@ -22,7 +22,7 @@ final fetchAllFirmProvider =
 
 typedef FetchAllFirmRef = AutoDisposeFutureProviderRef<List<FirmModel>>;
 String _$fetchAllBatchByFirmHash() =>
-    r'd1d76c04166ec117fd7bf43f72be769ebdf05d98';
+    r'4389b2e1ea0bc22d00c4887494e5ae8c5b127fee';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -173,7 +173,7 @@ class _FetchAllBatchByFirmProviderElement
   String get firmId => (origin as FetchAllBatchByFirmProvider).firmId;
 }
 
-String _$fetchBatchByIdHash() => r'e5d19b46e6847b09ad973e43dfc1f11a1fb238ef';
+String _$fetchBatchByIdHash() => r'63b79ac67423c4f1a92c9baa1d9d7862c2047faa';
 
 /// See also [fetchBatchById].
 @ProviderFor(fetchBatchById)

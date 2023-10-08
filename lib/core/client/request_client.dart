@@ -1,7 +1,8 @@
 // ignore: constant_identifier_names
 import 'package:dio/dio.dart';
-import 'package:poulty_manager/feature/auth/data/remote/remote.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '/feature/auth/data/remote/remote.dart';
 
 part 'request_client.g.dart';
 
@@ -68,9 +69,7 @@ class AddBearerTokenInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     final newErr = err.response?.data['error'] ?? err.response?.data['message'];
-
     final msg = newErr is String ? newErr : newErr.toString();
-
     handler.next(err.copyWith(message: msg));
   }
 }
