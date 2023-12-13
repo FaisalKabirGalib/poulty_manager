@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poulty_manager/feature/amar_taka/presentation/recent_transaction.dart';
 import 'package:poulty_manager/feature/amar_taka/presentation/widgets/carousal_amar_taka.dart';
 import 'package:poulty_manager/feature/amar_taka/presentation/widgets/options_container.dart';
 import 'package:poulty_manager/feature/amar_taka/presentation/widgets/transaction_summary.dart';
@@ -26,7 +27,14 @@ class AmarTakaHomePage extends StatelessWidget {
       KSized.h4,
       [
         Styled.text('সম্প্রতি লেনদেন').fontSize(20),
-        Styled.icon(Icons.arrow_forward).gestures(onTap: () {}),
+        Styled.icon(Icons.arrow_forward).gestures(onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const RecentTransactionScreen(),
+            ),
+          );
+        }),
       ]
           .toRow(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,12 +45,13 @@ class AmarTakaHomePage extends StatelessWidget {
       ),
       KSized.h12,
       ...List.generate(
-          10,
-          (index) => [
-                transactionSummary(),
-                KSized.h4,
-                const Divider(color: Color(0XFFF3F4F6)),
-              ].toColumn().padding(horizontal: 20)),
+        10,
+        (index) => [
+          transactionSummary(),
+          KSized.h4,
+          const Divider(color: Color(0XFFF3F4F6)),
+        ].toColumn().padding(horizontal: 20),
+      ),
     ].toColumn().parent(page);
   }
 }
