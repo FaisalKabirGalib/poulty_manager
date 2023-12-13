@@ -14,6 +14,12 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/Card 1.svg
+  SvgGenImage get card1 => const SvgGenImage('assets/icons/Card 1.svg');
+
+  /// File path: assets/icons/card_2.svg
+  SvgGenImage get card2 => const SvgGenImage('assets/icons/card_2.svg');
+
   /// File path: assets/icons/app-hen.svg
   SvgGenImage get appHen => const SvgGenImage('assets/icons/app-hen.svg');
 
@@ -27,8 +33,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/cart.svg
   SvgGenImage get cart => const SvgGenImage('assets/icons/cart.svg');
 
+  /// File path: assets/icons/chicken.svg
+  SvgGenImage get chicken => const SvgGenImage('assets/icons/chicken.svg');
+
   /// File path: assets/icons/close-mark.svg
   SvgGenImage get closeMark => const SvgGenImage('assets/icons/close-mark.svg');
+
+  /// File path: assets/icons/card_3.svg
+  SvgGenImage get container3 => const SvgGenImage('assets/icons/card_3.svg');
 
   /// File path: assets/icons/eye-hidden.svg
   SvgGenImage get eyeHidden => const SvgGenImage('assets/icons/eye-hidden.svg');
@@ -107,11 +119,15 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        card1,
+        card2,
         appHen,
         appShortLogo,
         call,
         cart,
+        chicken,
         closeMark,
+        container3,
         eyeHidden,
         eye,
         facebook,

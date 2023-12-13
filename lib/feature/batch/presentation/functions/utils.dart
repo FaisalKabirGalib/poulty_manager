@@ -35,3 +35,19 @@ Widget titleWithBackArrowAndAction(
     crossAxisAlignment: CrossAxisAlignment.start,
   );
 }
+
+Widget titleWithReturn(
+  String title, {
+  Widget? trailing,
+  required VoidCallback onBack,
+}) {
+  return <Widget>[
+    Styled.icon(Icons.arrow_back).gestures(onTap: onBack),
+    [
+      Styled.text(title).bold().fontSize(18),
+    ].toColumn().expanded(),
+    if (trailing != null) trailing
+  ].toRow(
+    crossAxisAlignment: CrossAxisAlignment.start,
+  );
+}
