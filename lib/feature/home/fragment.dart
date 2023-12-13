@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:poulty_manager/feature/amar_taka/presentation/amar_taka_home.dart';
+import 'package:poulty_manager/feature/amar_taka/presentation/my_account_home.dart';
 import 'package:poulty_manager/feature/firm/data/repository/repo.dart';
 import 'package:styled_widget/styled_widget.dart';
 
@@ -73,7 +73,7 @@ class HomeFragments extends ConsumerWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const AmarTakaHomePage()));
+                      builder: (context) => const MyAccountHomePage()));
             },
           ),
           CreateGridItem(

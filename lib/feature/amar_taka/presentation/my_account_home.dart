@@ -9,8 +9,8 @@ import 'package:styled_widget/styled_widget.dart';
 import '../../../config/constant/constant.dart';
 import '../../../core/Layout/extension.dart';
 
-class AmarTakaHomePage extends StatelessWidget {
-  const AmarTakaHomePage({super.key});
+class MyAccountHomePage extends StatelessWidget {
+  const MyAccountHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
