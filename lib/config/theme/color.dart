@@ -13,6 +13,7 @@ class AppColors {
   static const Color successColor = Color(0xFF00B74A);
   static const Color dangerColor = Color(0xFFF5002E);
   static const Color warningColor = Color(0xFFFFCB00);
+  static const Color dividerColor = Color(0XFFF3F4F6);
 
   /// Gradient Colors
   static const Gradient primaryGradient = LinearGradient(
