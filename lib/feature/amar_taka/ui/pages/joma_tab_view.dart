@@ -1,10 +1,7 @@
-// joma_tab_view.dart
-
 import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/theme/color.dart';
-import '../../../../core/Layout/extension.dart';
 
 class JomaTabView extends StatelessWidget {
   const JomaTabView({super.key});

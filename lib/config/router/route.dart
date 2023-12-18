@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../feature/amar_taka/ui/my_account_home.dart';
 import '/config/router/router_refresh_stream.dart';
 import '/feature/InfoUpdate/ui/pages/form.dart';
 import '/feature/Medicine/presentation/page/page.dart';
@@ -29,6 +32,7 @@ enum AppRouteName {
   batch,
   newBatch,
   batchList,
+  myAccount,
 
   // Auth
   login,
@@ -68,7 +72,6 @@ GoRouter appRouter(AppRouterRef ref) {
         builder: (context, state) => const HomeFragments(),
         routes: [
           // Authentication Routes
-
           GoRoute(
             path: 'auth',
             builder: (context, state) => Container(),
@@ -112,8 +115,8 @@ GoRouter appRouter(AppRouterRef ref) {
               ),
             ],
           ),
-          // Batch Routes
 
+          // Batch Routes
           GoRoute(
             path: 'firm',
             builder: (context, state) => const AddNewFirmPage(),
@@ -198,6 +201,23 @@ GoRouter appRouter(AppRouterRef ref) {
             path: 'report/:id',
             builder: (context, state) =>
                 ReportGeneration(state.pathParameters['id'] ?? "0"),
+          ),
+
+          // My Account - Amar Taka
+          GoRoute(
+            name: AppRouteName.myAccount.name,
+            path: 'my-account',
+            builder: (context, state) => const MyAccountHomePage(),
+            routes: [
+              GoRoute(
+                path: 'recent-transactions',
+                builder: (context, state) => const RecentTransactionScreen(),
+              ),
+              GoRoute(
+                path: 'joma-uttolon',
+                builder: (context, state) => const JomaUttolonScreen(),
+              ),
+            ],
           ),
         ],
         // builder: (context, state) => const DailyAdvicePage(),

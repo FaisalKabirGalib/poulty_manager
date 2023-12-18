@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/dena_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/paona_tab_view.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/widgets/transaction_summary.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
-import 'package:poulty_manager/feature/shared/components/dialog_helper.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/constant/constant.dart';
-import '../../../../config/theme/color.dart';
 import '../../../../core/Layout/extension.dart';
 import '../../../batch/presentation/functions/utils.dart';
 

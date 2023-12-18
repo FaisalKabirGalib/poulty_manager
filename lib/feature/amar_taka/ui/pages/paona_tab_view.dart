@@ -1,5 +1,3 @@
-// transaction_tab_view.dart
-
 import 'package:flutter/material.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/transaction_summary.dart';
 import 'package:poulty_manager/feature/shared/components/dialog_helper.dart';

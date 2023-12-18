@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/config/constant/constant.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/uttolon_tab_view.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/theme/color.dart';
 import '../../../../core/Layout/extension.dart';
 import '../../../batch/presentation/functions/utils.dart';
 

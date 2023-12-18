@@ -4,13 +4,15 @@ import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon_screen.da
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/constant/constant.dart';
+import '../../../../gen/assets.gen.dart';
 
 Widget optionsContainer(context) {
   return Container(
     child: [
       optionItem(
         title: "জমা/উত্তলন",
-        icon: "assets/icons/amar_taka_option_1.svg",
+        // icon: "assets/icons/amar_taka_option_1.svg",
+        icon: Assets.icons.amarTakaOption1.svg(),
         onTap: () {
           Navigator.push(
             context,
@@ -22,12 +24,12 @@ Widget optionsContainer(context) {
       ),
       optionItem(
         title: "পেমেন্ট/রিসিভ",
-        icon: "assets/icons/amar_taka_option_2.svg",
+        icon: Assets.icons.amarTakaOption2.svg(),
         onTap: () {},
       ),
       optionItem(
         title: "ব্যাংক হিসাব",
-        icon: "assets/icons/amar_taka_option_3.svg",
+        icon: Assets.icons.amarTakaOption3.svg(),
         onTap: () {},
       ),
     ].toRow(
@@ -36,9 +38,13 @@ Widget optionsContainer(context) {
   );
 }
 
-Widget optionItem({title, icon, onTap}) {
+Widget optionItem({
+  required String title,
+  required Widget icon,
+  required VoidCallback onTap,
+}) {
   return [
-    SvgPicture.asset(icon),
+    icon,
     KSized.h8,
     Styled.text(
       title,
