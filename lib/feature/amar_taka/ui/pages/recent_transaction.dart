@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/dena_tab_view.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/paona_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/transaction_summary.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
 import 'package:poulty_manager/feature/shared/components/dialog_helper.dart';
@@ -42,49 +44,9 @@ class _RecentTransactionScreenState extends State<RecentTransactionScreen>
             Tab(text: 'পাওনা'),
             Tab(text: 'দেওনা'),
           ],
-          tabViews: [
-            ListView.builder(
-              itemCount: 30,
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {
-                    DialogHelper.showAlertDialog(
-                      context,
-                      'শেখ মুজিবুর রহমান',
-                      1500,
-                      'SADF44SFD',
-                      'JAN 20, 02:22 PM',
-                    );
-                  },
-                  child: [
-                    transactionSummary(),
-                    KSized.h4,
-                    const Divider(color: AppColors.dividerColor),
-                  ].toColumn().padding(horizontal: 20),
-                );
-              },
-            ),
-            ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {
-                    DialogHelper.showAlertDialog(
-                      context,
-                      'শেখ মুজিবুর রহমান',
-                      1500,
-                      'SADF44SFD',
-                      'JAN 20, 02:22 PM',
-                    );
-                  },
-                  child: [
-                    transactionSummary(),
-                    KSized.h4,
-                    const Divider(color: AppColors.dividerColor),
-                  ].toColumn().padding(horizontal: 20),
-                );
-              },
-            ),
+          tabViews: const [
+            PaonaTabView(itemCount: 10),
+            DenaTabView(itemCount: 20),
           ],
         ),
       )
