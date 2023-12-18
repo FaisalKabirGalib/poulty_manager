@@ -28,7 +28,9 @@ Widget titleWithBackArrowAndAction(
     [
       Styled.text(title).bold().fontSize(18),
       KSized.h10,
-      Styled.text(subTitle).textColor(Colors.grey.shade500)
+      Styled.text(subTitle)
+          .textAlignment(TextAlign.center)
+          .textColor(Colors.grey.shade500)
     ].toColumn().expanded(),
     if (trailing != null) trailing
   ].toRow(
