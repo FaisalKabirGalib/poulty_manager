@@ -53,3 +53,15 @@ Widget titleWithReturn(
     crossAxisAlignment: CrossAxisAlignment.start,
   );
 }
+
+Widget backAndTrailing({
+  required VoidCallback onBack,
+  Widget? trailing,
+}) {
+  return <Widget>[
+    Styled.icon(Icons.arrow_back).gestures(onTap: onBack),
+    if (trailing != null) trailing
+  ].toRow(
+    crossAxisAlignment: CrossAxisAlignment.start,
+  );
+}

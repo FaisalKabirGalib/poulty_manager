@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/bank_hishab_screen.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon_screen.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive_screen.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/bank_hishab/bank_hishab_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/joma_uttolon_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/payment_receive_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/recent_transaction.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../feature/amar_taka/ui/my_account_home.dart';

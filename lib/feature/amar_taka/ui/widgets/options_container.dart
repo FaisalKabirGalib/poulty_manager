@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/payment_receive_screen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/constant/constant.dart';
 import '../../../../gen/assets.gen.dart';
-import '../pages/bank_hishab_screen.dart';
-import '../pages/joma_uttolon_screen.dart';
+import '../pages/bank_hishab/bank_hishab_screen.dart';
+import '../pages/joma_uttolon/joma_uttolon_screen.dart';
 
 Widget optionsContainer(context) {
   return Container(

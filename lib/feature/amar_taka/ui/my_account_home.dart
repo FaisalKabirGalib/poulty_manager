@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/recent_transaction.dart';
 import 'widgets/carousal_amar_taka.dart';
 import 'widgets/options_container.dart';
 import 'widgets/transaction_summary.dart';
