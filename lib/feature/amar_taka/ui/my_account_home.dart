@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/widgets/carousal_amar_taka.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/widgets/options_container.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/widgets/transaction_summary.dart';
-import 'package:poulty_manager/feature/batch/presentation/functions/utils.dart';
+import 'widgets/carousal_amar_taka.dart';
+import 'widgets/options_container.dart';
+import 'widgets/transaction_summary.dart';
+import '../../batch/presentation/functions/utils.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../config/constant/constant.dart';
+import '../../../config/theme/color.dart';
 import '../../../core/Layout/extension.dart';
 
 class MyAccountHomePage extends StatelessWidget {
@@ -31,7 +32,11 @@ class MyAccountHomePage extends StatelessWidget {
         Styled.icon(Icons.arrow_forward).gestures(
           onTap: () {
             // context.push('/recent-transactions');
-            GoRouter.of(context).go('/my-account/recent-transactions');
+            // GoRouter.of(context).push('/recent-transactions');
+
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const RecentTransactionScreen();
+            }));
           },
         ),
       ]
@@ -40,7 +45,7 @@ class MyAccountHomePage extends StatelessWidget {
           )
           .padding(horizontal: 20),
       const Divider(
-        color: Color(0XFFF3F4F6),
+        color: AppColors.dividerColor,
       ),
       KSized.h12,
       ...List.generate(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:styled_widget/styled_widget.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/widgets/balance_display.dart';
 
-import '../../../../config/theme/color.dart';
+import '../widgets/actions_buttons.dart';
 
 class UttolonTabView extends StatelessWidget {
   const UttolonTabView({super.key});
@@ -10,33 +10,17 @@ class UttolonTabView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 100,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: const Color(0XFF00B74A).withOpacity(0.2),
-            ),
-            color: const Color(0XFF00B74A).withOpacity(0.1),
-          ),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Styled.text('বর্তমান ব্যালেন্স').fontSize(16),
-                  Styled.text('৳ ১৫০০.০০')
-                      .textColor(AppColors.successColor)
-                      .fontSize(24)
-                      .fontWeight(FontWeight.bold),
-                ],
-              ),
-            ),
-          ),
-        )
+        const BalanceDisplay(balance: '890'),
+        ActionButtons(
+          onCancel: () {
+            print('On Cancel Clicked');
+          },
+          onSubmit: () {
+            print('On Submit Clicked');
+          },
+          cancelText: "বাতিল করুন﻿",
+          submitText: "উত্তোলন করুন﻿",
+        ),
       ],
     );
   }

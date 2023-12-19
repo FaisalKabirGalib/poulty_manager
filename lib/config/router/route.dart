@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/bank_hishab_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon_screen.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -216,6 +218,14 @@ GoRouter appRouter(AppRouterRef ref) {
               GoRoute(
                 path: 'joma-uttolon',
                 builder: (context, state) => const JomaUttolonScreen(),
+              ),
+              GoRoute(
+                path: 'payment-receive',
+                builder: (context, state) => const PaymentReceiveScreen(),
+              ),
+              GoRoute(
+                path: 'bank_hishab',
+                builder: (context, state) => const BankHishabScreen(),
               ),
             ],
           ),

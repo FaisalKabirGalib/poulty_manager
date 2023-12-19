@@ -7,14 +7,14 @@ import 'package:styled_widget/styled_widget.dart';
 import '../../../../core/Layout/extension.dart';
 import '../../../batch/presentation/functions/utils.dart';
 
-class JomaUttolonScreen extends StatefulWidget {
-  const JomaUttolonScreen({super.key});
+class BankHishabScreen extends StatefulWidget {
+  const BankHishabScreen({super.key});
 
   @override
-  State<JomaUttolonScreen> createState() => _JomaUttolonScreenState();
+  State<BankHishabScreen> createState() => _BankHishabScreenState();
 }
 
-class _JomaUttolonScreenState extends State<JomaUttolonScreen>
+class _BankHishabScreenState extends State<BankHishabScreen>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -28,29 +28,25 @@ class _JomaUttolonScreenState extends State<JomaUttolonScreen>
   Widget build(BuildContext context) {
     return [
       titleWithBackArrowAndAction(
-        'জমা/উত্তলন',
-        'এই সেকশন আপনার ফার্মের টাকা জমা করতে পারবেন এবং টাকা উত্তোলন করতে পারবেন। ',
+        'ব্যাংক হিসাব',
+        'এই সেকশন আপনার ফার্মের ব্যাংক হিসাব যুক্ত করুন ওনিয়মিত হিসাব সংরক্ষণ করুন।',
         onBack: () {
           Navigator.pop(context);
         },
       ),
       SizedBox(
         height: MediaQuery.of(context).size.height,
-        child: CustomTabBar(
-          tabController: tabController,
-          tabs: const [
-            Tab(text: 'জমা'),
-            Tab(text: 'উত্তলন'),
-          ],
-          tabViews: const [
-            // Joma Tab View
+        child: CustomTabBar(tabController: tabController, tabs: const [
+          Tab(text: 'জমা'),
+          Tab(text: 'উত্তলন'),
+        ], tabViews: const [
+          // Joma Tab View
 
-            JomaTabView(),
+          JomaTabView(),
 
-            // Uttolon Tab View
-            UttolonTabView(),
-          ],
-        ),
+          // Uttolon Tab View
+          UttolonTabView(),
+        ]),
       )
     ].toColumn().parent(page);
   }
