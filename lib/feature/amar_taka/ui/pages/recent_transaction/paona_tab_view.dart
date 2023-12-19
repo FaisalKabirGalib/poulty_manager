@@ -3,8 +3,8 @@ import 'package:poulty_manager/feature/amar_taka/ui/widgets/transaction_summary.
 import 'package:poulty_manager/feature/shared/components/dialog_helper.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/constant/constant.dart';
-import '../../../../config/theme/color.dart';
+import '../../../../../config/constant/constant.dart';
+import '../../../../../config/theme/color.dart';
 
 class PaonaTabView extends StatelessWidget {
   final int itemCount;

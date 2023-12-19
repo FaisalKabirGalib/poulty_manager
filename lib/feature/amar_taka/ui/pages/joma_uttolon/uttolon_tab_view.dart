@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/balance_display.dart';
 
-import '../widgets/actions_buttons.dart';
+import '../../widgets/actions_buttons.dart';
 
 class UttolonTabView extends StatelessWidget {
   const UttolonTabView({super.key});

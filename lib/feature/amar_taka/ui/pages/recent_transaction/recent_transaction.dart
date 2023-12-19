@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/dena_tab_view.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/paona_tab_view.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/dena_tab_view.dart';
+import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/paona_tab_view.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../core/Layout/extension.dart';
-import '../../../batch/presentation/functions/utils.dart';
+import '../../../../../core/Layout/extension.dart';
+import '../../../../batch/presentation/functions/utils.dart';
 
 class RecentTransactionScreen extends StatefulWidget {
   const RecentTransactionScreen({super.key});
