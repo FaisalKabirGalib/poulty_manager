@@ -19,10 +19,12 @@ class CustomTabBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        // Parent Container
         KSized.h12,
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20),
+          // margin: const EdgeInsets.symmetric(horizontal: 20),
+          margin: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.1,
+          ),
           decoration: BoxDecoration(
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(30),
@@ -32,6 +34,14 @@ class CustomTabBar extends StatelessWidget {
             isScrollable: true,
             unselectedLabelColor: Colors.black,
             labelColor: AppColors.primaryColor,
+            labelStyle: const TextStyle(
+              fontSize: 16,
+            ),
+            // labelPadding: EdgeInsets.symmetric(
+            //   horizontal: MediaQuery.of(context).size.width * 0.1,
+            // ),
+            dividerColor: Colors.transparent,
+            dividerHeight: 0,
             indicatorColor: Colors.white,
             indicatorWeight: 2,
             indicatorSize: TabBarIndicatorSize.tab,
@@ -39,6 +49,7 @@ class CustomTabBar extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(50),
             ),
+            physics: const BouncingScrollPhysics(),
             tabAlignment: TabAlignment.center,
             controller: tabController,
             tabs: tabs,
