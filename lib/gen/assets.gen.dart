@@ -14,6 +14,10 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/alert_dialog_header.svg
+  SvgGenImage get alertDialogHeader =>
+      const SvgGenImage('assets/icons/alert_dialog_header.svg');
+
   /// File path: assets/icons/amar_taka_Card_1.svg
   SvgGenImage get amarTakaCard1 =>
       const SvgGenImage('assets/icons/amar_taka_Card_1.svg');
@@ -134,6 +138,7 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        alertDialogHeader,
         amarTakaCard1,
         amarTakaCard2,
         amarTakaCard3,

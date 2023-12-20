@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:poulty_manager/config/config.dart';
 import 'package:poulty_manager/config/constant/constant.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -23,8 +24,9 @@ class DialogHelper {
           ),
           clipBehavior: Clip.antiAliasWithSaveLayer,
           shadowColor: Colors.grey.shade200,
+          elevation: 0,
           content: Container(
-            height: MediaQuery.of(context).size.height * 0.6,
+            height: MediaQuery.of(context).size.height * 0.5,
             width: MediaQuery.of(context).size.width * 0.8,
             color: Colors.white,
             child: Column(
@@ -62,6 +64,8 @@ class DialogHelper {
                 ),
                 KSized.h8,
                 KSized.h8,
+
+                // Details
                 Align(
                   alignment: Alignment.center,
                   child: Column(
