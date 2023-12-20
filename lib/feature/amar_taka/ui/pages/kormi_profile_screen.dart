@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:poulty_manager/feature/intro_screens/onboarding_screen.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../intro_screens/introduction_screen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/constant/constant.dart';
@@ -20,7 +23,13 @@ class KormiProfileScreen extends StatelessWidget {
                   Navigator.pop(context);
                 }),
                 const Spacer(),
-                Styled.icon(Icons.edit).gestures(onTap: () {}),
+                Assets.icons.edit
+                    .svg(
+                      color: AppColors.blackColor,
+                      height: 20,
+                      width: 20,
+                    )
+                    .gestures(onTap: () {}),
               ].toRow(),
               KSized.h12,
               [
@@ -66,6 +75,9 @@ class KormiProfileScreen extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 // TODO: Delete kormi
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const OnboardingScreen();
+                }));
               },
               style: ElevatedButton.styleFrom(
                 elevation: 0,
@@ -77,9 +89,10 @@ class KormiProfileScreen extends StatelessWidget {
                 ),
               ),
               child: [
-                const Icon(
-                  Icons.delete_forever_outlined,
+                Assets.icons.delete.svg(
                   color: AppColors.dangerColor,
+                  height: 20,
+                  width: 20,
                 ),
                 Styled.text('ডিলিট করুন')
                     .textColor(AppColors.dangerColor)
