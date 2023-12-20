@@ -61,6 +61,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/close-mark.svg
   SvgGenImage get closeMark => const SvgGenImage('assets/icons/close-mark.svg');
 
+  /// File path: assets/icons/delete.svg
+  SvgGenImage get delete => const SvgGenImage('assets/icons/delete.svg');
+
+  /// File path: assets/icons/edit.svg
+  SvgGenImage get edit => const SvgGenImage('assets/icons/edit.svg');
+
   /// File path: assets/icons/eye-hidden.svg
   SvgGenImage get eyeHidden => const SvgGenImage('assets/icons/eye-hidden.svg');
 
@@ -133,6 +139,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
+  /// File path: assets/icons/walkthrough_1.svg
+  SvgGenImage get walkthrough1 =>
+      const SvgGenImage('assets/icons/walkthrough_1.svg');
+
+  /// File path: assets/icons/walkthrough_2.svg
+  SvgGenImage get walkthrough2 =>
+      const SvgGenImage('assets/icons/walkthrough_2.svg');
+
+  /// File path: assets/icons/walkthrough_3.svg
+  SvgGenImage get walkthrough3 =>
+      const SvgGenImage('assets/icons/walkthrough_3.svg');
+
   /// File path: assets/icons/weight.svg
   SvgGenImage get weight => const SvgGenImage('assets/icons/weight.svg');
 
@@ -151,6 +169,8 @@ class $AssetsIconsGen {
         cart,
         chicken,
         closeMark,
+        delete,
+        edit,
         eyeHidden,
         eye,
         facebook,
@@ -174,6 +194,9 @@ class $AssetsIconsGen {
         totalBai,
         uppadon,
         user,
+        walkthrough1,
+        walkthrough2,
+        walkthrough3,
         weight
       ];
 }
@@ -316,6 +339,18 @@ class $AssetsImagesGen {
   /// File path: assets/images/setting.png
   AssetGenImage get setting => const AssetGenImage('assets/images/setting.png');
 
+  /// File path: assets/images/walkthrough_1.png
+  AssetGenImage get walkthrough1 =>
+      const AssetGenImage('assets/images/walkthrough_1.png');
+
+  /// File path: assets/images/walkthrough_2.png
+  AssetGenImage get walkthrough2 =>
+      const AssetGenImage('assets/images/walkthrough_2.png');
+
+  /// File path: assets/images/walkthrough_3.png
+  AssetGenImage get walkthrough3 =>
+      const AssetGenImage('assets/images/walkthrough_3.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         affiliatePartner,
@@ -353,7 +388,10 @@ class $AssetsImagesGen {
         question,
         rogPotikar,
         sahajjerJonno,
-        setting
+        setting,
+        walkthrough1,
+        walkthrough2,
+        walkthrough3
       ];
 }
 
