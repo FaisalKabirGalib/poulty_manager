@@ -21,10 +21,6 @@ class CustomTabBar extends StatelessWidget {
       children: [
         KSized.h12,
         Container(
-          // margin: const EdgeInsets.symmetric(horizontal: 20),
-          margin: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.1,
-          ),
           decoration: BoxDecoration(
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(30),

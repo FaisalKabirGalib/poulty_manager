@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/recent_transaction.dart';
 import 'widgets/carousal_amar_taka.dart';
 import 'widgets/options_container.dart';
 import 'widgets/transaction_summary.dart';
@@ -31,12 +30,7 @@ class MyAccountHomePage extends StatelessWidget {
         Styled.text('সম্প্রতি লেনদেন').fontSize(20),
         Styled.icon(Icons.arrow_forward).gestures(
           onTap: () {
-            // context.push('/recent-transactions');
-            // GoRouter.of(context).push('/recent-transactions');
-
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const RecentTransactionScreen();
-            }));
+            context.push('/my-account/recent-transactions');
           },
         ),
       ]

@@ -40,9 +40,15 @@ class _PaymentReceiveScreenState extends State<PaymentReceiveScreen>
         height: MediaQuery.of(context).size.height,
         child: CustomTabBar(
           tabController: tabController,
-          tabs: const [
-            Tab(text: 'বেতন পরিশোধ'),
-            Tab(text: 'ব্যাচ হিসাব'),
+          tabs: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'বেতন পরিশোধ'),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'ব্যাচ হিসাব'),
+            ),
           ],
           tabViews: const [
             BetonPorishodTabView(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/joma_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/uttolon_tab_view.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
@@ -28,19 +29,25 @@ class _JomaUttolonScreenState extends State<JomaUttolonScreen>
   Widget build(BuildContext context) {
     return [
       titleWithBackArrowAndAction(
-        'জমা/উত্তলন',
+        'জমা/উত্তোলন',
         'এই সেকশন আপনার ফার্মের টাকা জমা করতে পারবেন এবং টাকা উত্তোলন করতে পারবেন। ',
         onBack: () {
-          Navigator.pop(context);
+          context.pop();
         },
       ),
       SizedBox(
         height: MediaQuery.of(context).size.height,
         child: CustomTabBar(
           tabController: tabController,
-          tabs: const [
-            Tab(text: 'জমা'),
-            Tab(text: 'উত্তলন'),
+          tabs: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'জমা'),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'উত্তোলন'),
+            ),
           ],
           tabViews: const [
             // Joma Tab View

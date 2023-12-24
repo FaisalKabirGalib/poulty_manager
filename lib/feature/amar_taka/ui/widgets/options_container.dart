@@ -1,50 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/payment_receive_screen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/constant/constant.dart';
 import '../../../../gen/assets.gen.dart';
-import '../pages/bank_hishab/bank_hishab_screen.dart';
-import '../pages/joma_uttolon/joma_uttolon_screen.dart';
 
-Widget optionsContainer(context) {
+Widget optionsContainer(BuildContext context) {
   return Container(
     child: [
       optionItem(
         title: "জমা/উত্তলন",
-        // icon: "assets/icons/amar_taka_option_1.svg",
         icon: Assets.icons.amarTakaOption1.svg(),
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const JomaUttolonScreen(),
-            ),
-          );
-
-          // context.push('/joma-uttolon');
-          // GoRouter.of(context).push('/joma-uttolon');
+          context.push('/my-account/joma-uttolon');
         },
       ),
       optionItem(
         title: "পেমেন্ট/রিসিভ",
         icon: Assets.icons.amarTakaOption2.svg(),
         onTap: () {
-          // context.push('/payment-receive');
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const PaymentReceiveScreen();
-          }));
+          context.push('/my-account/payment-receive');
         },
       ),
       optionItem(
         title: "ব্যাংক হিসাব",
         icon: Assets.icons.amarTakaOption3.svg(),
         onTap: () {
-          // context.push('/bank_hishab');
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const BankHishabScreen();
-          }));
+          context.push('/my-account/bank_hishab');
         },
       ),
     ].toRow(

@@ -68,8 +68,6 @@ class HomeFragments extends ConsumerWidget {
             ),
             text: Styled.text('আমার টাকা'),
             onPressed: () {
-              // context.showNotImplSnackBar();
-
               context.push('/my-account');
             },
           ),

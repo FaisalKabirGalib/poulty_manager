@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/feature/intro_screens/onboarding_screen.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../intro_screens/introduction_screen.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -76,7 +75,7 @@ class KormiProfileScreen extends StatelessWidget {
               onPressed: () {
                 // TODO: Delete kormi
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const OnboardingScreen();
+                  return const IntroductionScreen();
                 }));
               },
               style: ElevatedButton.styleFrom(

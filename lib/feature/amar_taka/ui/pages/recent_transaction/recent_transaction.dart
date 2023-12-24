@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/dena_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/paona_tab_view.dart';
 import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
@@ -30,15 +31,21 @@ class _RecentTransactionScreenState extends State<RecentTransactionScreen>
     // final tabController = TabController(length: 2, vsync: this);
     return <Widget>[
       titleWithReturn('সম্প্রতি লেনদেন', onBack: () {
-        Navigator.pop(context);
+        context.pop();
       }),
       SizedBox(
         height: MediaQuery.of(context).size.height,
         child: CustomTabBar(
           tabController: tabController,
-          tabs: const [
-            Tab(text: 'পাওনা'),
-            Tab(text: 'দেওনা'),
+          tabs: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'পাওনা'),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: const Tab(text: 'দেওনা'),
+            ),
           ],
           tabViews: const [
             PaonaTabView(itemCount: 10),

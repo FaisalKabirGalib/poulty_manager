@@ -4,6 +4,7 @@ import 'package:poulty_manager/feature/amar_taka/ui/pages/bank_hishab/bank_hisha
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/joma_uttolon_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/payment_receive_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/recent_transaction.dart';
+import 'package:poulty_manager/feature/intro_screens/onboarding_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../feature/amar_taka/ui/my_account_home.dart';
@@ -25,6 +26,9 @@ import '../../feature/batch/presentation/page/page.dart';
 part 'route.g.dart';
 
 enum AppRouteName {
+  onboarding,
+  intro,
+
   main,
   home,
   market,
@@ -41,6 +45,12 @@ enum AppRouteName {
   register,
   otp,
   accountComplete,
+
+  // Amar Taka Routes
+  recentTransactions,
+  jomaUttolon,
+  paymentReceive,
+  bankHishab,
 }
 
 @Riverpod(keepAlive: true)
@@ -212,18 +222,22 @@ GoRouter appRouter(AppRouterRef ref) {
             builder: (context, state) => const MyAccountHomePage(),
             routes: [
               GoRoute(
+                name: AppRouteName.recentTransactions.name,
                 path: 'recent-transactions',
                 builder: (context, state) => const RecentTransactionScreen(),
               ),
               GoRoute(
+                name: AppRouteName.jomaUttolon.name,
                 path: 'joma-uttolon',
                 builder: (context, state) => const JomaUttolonScreen(),
               ),
               GoRoute(
+                name: AppRouteName.paymentReceive.name,
                 path: 'payment-receive',
                 builder: (context, state) => const PaymentReceiveScreen(),
               ),
               GoRoute(
+                name: AppRouteName.bankHishab.name,
                 path: 'bank_hishab',
                 builder: (context, state) => const BankHishabScreen(),
               ),
