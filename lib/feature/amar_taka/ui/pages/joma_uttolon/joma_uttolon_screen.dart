@@ -49,7 +49,7 @@ class _JomaUttolonScreenState extends State<JomaUttolonScreen>
               child: const Tab(text: 'উত্তোলন'),
             ),
           ],
-          tabViews: const [
+          tabViews: [
             // Joma Tab View
 
             JomaTabView(),

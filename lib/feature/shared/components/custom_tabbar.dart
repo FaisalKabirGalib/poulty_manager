@@ -33,9 +33,6 @@ class CustomTabBar extends StatelessWidget {
             labelStyle: const TextStyle(
               fontSize: 16,
             ),
-            // labelPadding: EdgeInsets.symmetric(
-            //   horizontal: MediaQuery.of(context).size.width * 0.1,
-            // ),
             dividerColor: Colors.transparent,
             dividerHeight: 0,
             indicatorColor: Colors.white,
