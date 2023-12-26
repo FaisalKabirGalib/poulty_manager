@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../config/constant/constant.dart';
-import '../../config/theme/color.dart';
+import 'package:go_router/go_router.dart';
+import 'package:poulty_manager/config/config.dart';
 import 'package:styled_widget/styled_widget.dart';
+
+import '../../config/constant/constant.dart';
 
 class IntroPage extends StatelessWidget {
   final String heading;
@@ -47,7 +48,9 @@ class IntroPage extends StatelessWidget {
                 ),
                 side: const BorderSide(color: AppColors.primaryColor),
               ),
-              onPressed: () {},
+              onPressed: () {
+                context.goNamed(AppRouteName.login.name);
+              },
               child: Styled.text('অ্যাকাউন্টে প্রবেশ করুন')
                   .fontSize(20)
                   .textColor(AppColors.primaryColor),
@@ -62,7 +65,9 @@ class IntroPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                context.goNamed(AppRouteName.register.name);
+              },
               child: Styled.text('অ্যাকাউন্টে তৈরি করুন')
                   .fontSize(20)
                   .textColor(Colors.white),

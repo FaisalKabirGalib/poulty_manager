@@ -4,10 +4,10 @@ import 'package:poulty_manager/feature/amar_taka/ui/pages/bank_hishab/bank_hisha
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/joma_uttolon_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/payment_receive_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/recent_transaction/recent_transaction.dart';
+import 'package:poulty_manager/feature/intro_screens/introduction_screen.dart';
 import 'package:poulty_manager/feature/intro_screens/onboarding_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../feature/amar_taka/ui/my_account_home.dart';
 import '/config/router/router_refresh_stream.dart';
 import '/feature/InfoUpdate/ui/pages/form.dart';
 import '/feature/Medicine/presentation/page/page.dart';
@@ -20,6 +20,7 @@ import '/feature/firm/ui/page/add_firm_page.dart';
 import '/feature/home/fragment.dart';
 import '/feature/report/ui/page/report.dart';
 import '/feature/vaccine/presentation/pages/pages.dart';
+import '../../feature/amar_taka/ui/my_account_home.dart';
 import '../../feature/batch/presentation/page/Home/home.dart';
 import '../../feature/batch/presentation/page/page.dart';
 
@@ -68,7 +69,7 @@ GoRouter appRouter(AppRouterRef ref) {
         return null;
       } else {
         if (!path.contains("auth")) {
-          return '/auth/login';
+          return '/auth/intro';
         }
 
         return null;
@@ -88,6 +89,14 @@ GoRouter appRouter(AppRouterRef ref) {
             path: 'auth',
             builder: (context, state) => Container(),
             routes: [
+              GoRoute(
+                  path: 'intro',
+                  builder: (context, state) => const IntroductionScreen()),
+              GoRoute(
+                path: 'onboarding',
+                name: AppRouteName.onboarding.name,
+                builder: (context, state) => const OnboardingScreen(),
+              ),
               GoRoute(
                 name: AppRouteName.login.name,
                 path: 'login',

@@ -64,7 +64,7 @@ class OnboardingScreen extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    dividerHeight: 0,
+                    // dividerHeight: 0,
                   ),
                 ),
               ),

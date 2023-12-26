@@ -34,7 +34,7 @@ class CustomTabBar extends StatelessWidget {
               fontSize: 16,
             ),
             dividerColor: Colors.transparent,
-            dividerHeight: 0,
+            // dividerHeight: 0,
             indicatorColor: Colors.white,
             indicatorWeight: 2,
             indicatorSize: TabBarIndicatorSize.tab,
