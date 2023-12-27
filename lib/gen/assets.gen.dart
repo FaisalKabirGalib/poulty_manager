@@ -67,6 +67,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/edit.svg
   SvgGenImage get edit => const SvgGenImage('assets/icons/edit.svg');
 
+  /// File path: assets/icons/email_icon.png
+  AssetGenImage get emailIcon =>
+      const AssetGenImage('assets/icons/email_icon.png');
+
   /// File path: assets/icons/eye-hidden.svg
   SvgGenImage get eyeHidden => const SvgGenImage('assets/icons/eye-hidden.svg');
 
@@ -76,11 +80,19 @@ class $AssetsIconsGen {
   /// File path: assets/icons/facebook.svg
   SvgGenImage get facebook => const SvgGenImage('assets/icons/facebook.svg');
 
+  /// File path: assets/icons/facebook_icon.svg
+  SvgGenImage get facebookIcon =>
+      const SvgGenImage('assets/icons/facebook_icon.svg');
+
   /// File path: assets/icons/float_home.svg
   SvgGenImage get floatHome => const SvgGenImage('assets/icons/float_home.svg');
 
   /// File path: assets/icons/google.svg
   SvgGenImage get google => const SvgGenImage('assets/icons/google.svg');
+
+  /// File path: assets/icons/google_icon.svg
+  SvgGenImage get googleIcon =>
+      const SvgGenImage('assets/icons/google_icon.svg');
 
   /// File path: assets/icons/hen_outline.svg
   SvgGenImage get henOutline =>
@@ -114,6 +126,10 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/password.svg
   SvgGenImage get password => const SvgGenImage('assets/icons/password.svg');
+
+  /// File path: assets/icons/password_lock.png
+  AssetGenImage get passwordLock =>
+      const AssetGenImage('assets/icons/password_lock.png');
 
   /// File path: assets/icons/phone.svg
   SvgGenImage get phone => const SvgGenImage('assets/icons/phone.svg');
@@ -155,7 +171,7 @@ class $AssetsIconsGen {
   SvgGenImage get weight => const SvgGenImage('assets/icons/weight.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
         alertDialogHeader,
         amarTakaCard1,
         amarTakaCard2,
@@ -171,11 +187,14 @@ class $AssetsIconsGen {
         closeMark,
         delete,
         edit,
+        emailIcon,
         eyeHidden,
         eye,
         facebook,
+        facebookIcon,
         floatHome,
         google,
+        googleIcon,
         henOutline,
         iconOtp,
         injection,
@@ -186,6 +205,7 @@ class $AssetsIconsGen {
         menuReport,
         noti,
         password,
+        passwordLock,
         phone,
         play,
         rightMark,

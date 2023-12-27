@@ -30,15 +30,14 @@ class SignInInitial extends HookConsumerWidget {
       ),
       Assets.images.appHen.image(),
       KSized.h10,
-      Styled.text("সাইন ইন").textColor(Colors.grey.shade500),
+      Styled.text("সাইন ইন").fontSize(24).bold(),
 
       KSized.h10,
       Styled.text("আপনার অ্যাকাউন্টে প্রবেশ করতে নিচের প্রয়োজনীয় তথ্যগুলো দিন।")
-          .textColor(Colors.grey.shade500)
-          .alignment(Alignment.center)
-          .constrained(
-            width: MediaQuery.of(context).size.width * 0.8,
-          ),
+          .textAlignment(TextAlign.center)
+          .fontWeight(FontWeight.w500)
+          .textColor(AppColors.black2Color)
+          .fontSize(16),
       KSized.h10,
       KSized.h10,
 
@@ -48,11 +47,23 @@ class SignInInitial extends HookConsumerWidget {
         title: "ইমেইল",
         noTitleApply: true,
         decoration: InputDecoration(
-          enabledBorder: InputBorder.none,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
           hintText: "ইমেইল/ফোন নম্বর",
+          hintStyle: const TextStyle(
+            color: AppColors.black2Color,
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
           filled: true,
           fillColor: Colors.grey[100],
-          prefixIcon: const Icon(Icons.email_outlined, color: Colors.grey),
+          prefixIcon: Assets.icons.emailIcon.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: const BorderSide(color: AppColors.primaryColor),
@@ -62,7 +73,9 @@ class SignInInitial extends HookConsumerWidget {
           ),
         ),
       ).toWidget,
+
       KSized.h10,
+
       FormHelperTextField(
         "password",
         controller: passwordController,
@@ -71,24 +84,37 @@ class SignInInitial extends HookConsumerWidget {
         maxLine: 1,
         obscureText: showPassword.value,
         decoration: InputDecoration(
-          enabledBorder: InputBorder.none,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: const BorderSide(color: AppColors.primaryColor),
           ),
           hintText: "পাসওয়ার্ড",
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
           suffixIcon: showPassword.value
-              ? Styled.icon(Icons.visibility_off, color: Colors.grey.shade500)
+              ? Styled.icon(Icons.visibility_off_outlined,
+                      color: Colors.grey.shade500)
                   .gestures(onTap: () {
                   showPassword.value = !showPassword.value;
                 })
-              : Styled.icon(Icons.visibility, color: Colors.grey.shade500)
+              : Styled.icon(Icons.visibility_outlined,
+                      color: Colors.grey.shade500)
                   .gestures(onTap: () {
                   showPassword.value = !showPassword.value;
                 }),
           filled: true,
           fillColor: Colors.grey[100],
-          prefixIcon: const Icon(Icons.lock_outline, color: Colors.grey),
+          prefixIcon: Assets.icons.passwordLock.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -96,12 +122,20 @@ class SignInInitial extends HookConsumerWidget {
       ).toWidget,
       KSized.h10,
       Styled.text("পাসওয়ার্ড ভুলে গেছেন?")
-          .textColor(Colors.grey)
+          .textColor(AppColors.black2Color)
           .alignment(Alignment.centerRight),
       KSized.h10,
       KSized.h10,
       ElevatedButton(
-        style: primaryBtnStyle,
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size(double.infinity, 60),
+          elevation: 0,
+          backgroundColor: AppColors.primaryColor,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
         onPressed: () {
           if (passwordController.text.isEmpty ||
               phoneController.text.isEmpty ||
@@ -122,17 +156,19 @@ class SignInInitial extends HookConsumerWidget {
           }
         },
         child: Styled.text("অ্যাকাউন্টে প্রবেশ করুন")
-            .fontSize(14)
+            .fontSize(18)
+            .fontWeight(FontWeight.w500)
             .textColor(Colors.white),
       ),
+      KSized.h10,
       KSized.h10,
       RichText(
         text: TextSpan(
           text: "অ্যাকাউন্ট নেই? ",
-          style: const TextStyle(color: Colors.grey),
+          style: const TextStyle(color: AppColors.black2Color),
           children: [
             TextSpan(
-              text: "সাইন আপ করুন",
+              text: "নিবন্ধন করুন",
               style: const TextStyle(color: AppColors.primaryColor),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
@@ -148,36 +184,68 @@ class SignInInitial extends HookConsumerWidget {
       // MAKE A OR DIVIDER
       [
         KSized.w12,
-        const Divider().expanded(),
+        const Divider(
+          color: AppColors.black3Color,
+        ).expanded(),
         KSized.w12,
-        Styled.text("অথবা").alignment(Alignment.center),
+        Styled.text("অথবা")
+            .fontSize(14)
+            .textColor(AppColors.black2Color)
+            .alignment(Alignment.center),
         KSized.w12,
-        const Divider().expanded(),
+        const Divider(
+          color: AppColors.black3Color,
+        ).expanded(),
         KSized.w12,
       ].toRow(),
       KSized.h10,
-      // GOOGLE SIGN IN BUTTON
+      KSized.h10,
 
       [
+        // FACEBOOK SIGN IN BUTTON
         [
-          Styled.icon(Icons.facebook),
+          Assets.icons.facebookIcon.svg(
+            height: 30,
+            width: 30,
+          ),
           KSized.w10,
-          Styled.text("Facebook").textColor(Colors.grey)
-
-          // FACEBOOK SIGN IN BUTTON
-        ].toRow().padding(all: 10).decorated(
-              color: Colors.grey[100],
+          Styled.text("Facebook")
+              .textColor(const Color(0XFF61677D))
+              .fontSize(16)
+              .fontWeight(FontWeight.w500)
+        ]
+            .toRow()
+            .padding(all: 10)
+            .decorated(
+              color: AppColors.white3Color,
               borderRadius: BorderRadius.circular(16),
+            )
+            .constrained(
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: 60,
             ),
-        [
-          Styled.icon(Icons.gamepad_rounded),
-          KSized.w10,
-          Styled.text("Google").textColor(Colors.grey)
 
-          // FACEBOOK SIGN IN BUTTON
-        ].toRow().padding(all: 10).decorated(
+        // GOOGLE SIGN IN BUTTON
+        [
+          Assets.icons.googleIcon.svg(
+            height: 30,
+            width: 30,
+          ),
+          KSized.w10,
+          Styled.text("Google")
+              .textColor(const Color(0XFF61677D))
+              .fontSize(16)
+              .fontWeight(FontWeight.w500)
+        ]
+            .toRow()
+            .padding(all: 10)
+            .decorated(
               color: Colors.grey[100],
               borderRadius: BorderRadius.circular(16),
+            )
+            .constrained(
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: 60,
             ),
       ].toRow(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
