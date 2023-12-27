@@ -77,7 +77,7 @@ class RegistrationInitial extends HookWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-      ).toWidget.padding(horizontal: 20),
+      ).toWidget,
 
       KSized.h10,
       KSized.h10,
@@ -111,7 +111,7 @@ class RegistrationInitial extends HookWidget {
         ].toRow(
           mainAxisAlignment: MainAxisAlignment.center,
         ),
-      ).width(double.infinity).padding(horizontal: 20),
+      ).width(double.infinity),
       KSized.h10,
       KSized.h10,
       RichText(
@@ -214,6 +214,10 @@ class RegistrationInitial extends HookWidget {
       const Spacer(
         flex: 2,
       ),
-    ].toColumn();
+    ]
+        .toColumn()
+        .height(MediaQuery.of(context).size.height)
+        .padding(all: 20)
+        .scrollable();
   }
 }
