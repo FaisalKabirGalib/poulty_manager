@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:poulty_manager/config/constant/constant.dart';
-import 'package:poulty_manager/config/theme/color.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/kormi_list_screen.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/add_button.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/balance_display.dart';
@@ -36,9 +35,9 @@ class BankHishabScreen extends StatelessWidget {
           right: 20,
           child: AddButton(
             onPressed: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context) {
-              //   return const KormiListScreen();
-              // }));
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const KormiListScreen();
+              }));
             },
           ),
         ),

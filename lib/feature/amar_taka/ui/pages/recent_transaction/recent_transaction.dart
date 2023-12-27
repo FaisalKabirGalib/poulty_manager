@@ -48,7 +48,7 @@ class _RecentTransactionScreenState extends State<RecentTransactionScreen>
             ),
           ],
           tabViews: const [
-            PaonaTabView(itemCount: 10),
+            PaonaTabView(itemCount: 8),
             DenaTabView(itemCount: 20),
           ],
         ),

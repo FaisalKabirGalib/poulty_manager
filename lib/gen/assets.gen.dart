@@ -279,6 +279,10 @@ class $AssetsImagesGen {
   AssetGenImage get farmacyList =>
       const AssetGenImage('assets/images/farmacy-list.png');
 
+  /// File path: assets/images/forget_pass_icon.png
+  AssetGenImage get forgetPassIcon =>
+      const AssetGenImage('assets/images/forget_pass_icon.png');
+
   /// File path: assets/images/hello.png
   AssetGenImage get hello => const AssetGenImage('assets/images/hello.png');
 
@@ -399,6 +403,7 @@ class $AssetsImagesGen {
         farmControl,
         farmReporting,
         farmacyList,
+        forgetPassIcon,
         hello,
         hen,
         henVideo,
