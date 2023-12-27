@@ -40,24 +40,6 @@ class IntroPage extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 60),
-                backgroundColor: Colors.white,
-                elevation: 0,
-                foregroundColor: AppColors.primaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                side: const BorderSide(color: AppColors.primaryColor),
-              ),
-              onPressed: () {
-                context.goNamed(AppRouteName.login.name);
-              },
-              child: Styled.text('অ্যাকাউন্টে প্রবেশ করুন')
-                  .fontSize(20)
-                  .textColor(AppColors.primaryColor),
-            ).padding(bottom: 10),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(double.infinity, 60),
                 elevation: 0,
                 backgroundColor: AppColors.primaryColor,
                 foregroundColor: Colors.white,
@@ -68,10 +50,24 @@ class IntroPage extends StatelessWidget {
               onPressed: () {
                 context.goNamed(AppRouteName.register.name);
               },
-              child: Styled.text('অ্যাকাউন্টে তৈরি করুন')
+              child: Styled.text('অ্যাপটি ঘুরে দেখুন')
                   .fontSize(20)
                   .textColor(Colors.white),
             ).padding(bottom: 30),
+            [
+              Styled.text('আগে থেকেই অ্যাকাউন্ট রয়েছে?')
+                  .fontSize(16)
+                  .textColor(AppColors.black2Color),
+              KSized.w4,
+              Styled.text(' প্রবেশ করুন')
+                  .fontSize(16)
+                  .textColor(AppColors.primaryColor)
+                  .gestures(
+                onTap: () {
+                  context.goNamed(AppRouteName.login.name);
+                },
+              ),
+            ].toRow().fittedBox().padding(bottom: 30)
           ].toColumn().padding(horizontal: 10)
         ].toColumn().padding(horizontal: 40).expanded(),
       ),
