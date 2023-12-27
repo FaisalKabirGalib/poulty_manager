@@ -62,7 +62,7 @@ class RegistrationInitial extends HookWidget {
             borderSide: const BorderSide(color: AppColors.primaryColor),
           ),
           hintText: "মোবাইল নাম্বার",
-          prefixIcon: Assets.icons.callIcon.image(
+          prefixIcon: Assets.images.callIcon.image(
             color: AppColors.black2Color,
             width: 20,
             height: 20,

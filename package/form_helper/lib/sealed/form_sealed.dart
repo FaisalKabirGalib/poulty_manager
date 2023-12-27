@@ -496,27 +496,83 @@ class FormHelperTimeOfDayRangePicker extends FormHelperField {
       );
 }
 
+// class FormHelperRadio extends FormHelperField {
+//   final Map<String, String> option;
+//
+//   FormHelperRadio(super.name,
+//       {required super.title,
+//       required this.option,
+//       super.onChanged,
+//       super.isRequired});
+//
+//   @override
+//   Widget get toWidget => FormFieldTemplate(
+//         title: RichText(
+//           text: TextSpan(
+//             text: title,
+//             style: const TextStyle(
+//                 color: Colors.black, fontSize: 17, fontWeight: FontWeight.w300),
+//             children: [
+//               if (isRequired == true)
+//                 const TextSpan(
+//                   text: " *",
+//                   style: TextStyle(color: Colors.red, fontSize: 20),
+//                 )
+//               else
+//                 const TextSpan()
+//             ],
+//           ),
+//         ),
+//         child: FormBuilderChoiceChip(
+//           decoration: const InputDecoration(
+//             border: InputBorder.none,
+//           ),
+//           name: name,
+//           onChanged: onChanged,
+//           spacing: 20,
+//           options: option.keys
+//               .map((e) => FormBuilderChipOption(
+//                     value: option[e],
+//                     child: Text(e),
+//                   ))
+//               .toList(),
+//         ),
+//       );
+// }
+
 class FormHelperRadio extends FormHelperField {
   final Map<String, String> option;
+  final TextStyle? titleStyle; // Change: Added optional titleStyle parameter
+  final TextStyle? optionStyle; // Change: Added optional optionStyle parameter
 
+  // Change: Added titleStyle and optionStyle parameters to the constructor
   FormHelperRadio(super.name,
       {required super.title,
       required this.option,
       super.onChanged,
-      super.isRequired});
+      super.isRequired,
+      this.titleStyle,
+      this.optionStyle});
 
   @override
   Widget get toWidget => FormFieldTemplate(
         title: RichText(
           text: TextSpan(
             text: title,
-            style: const TextStyle(
-                color: Colors.black, fontSize: 17, fontWeight: FontWeight.w300),
+            // Change: Used titleStyle if provided, otherwise use default style
+            style: titleStyle ??
+                const TextStyle(
+                    color: Colors.black,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w300),
             children: [
               if (isRequired == true)
-                const TextSpan(
+                TextSpan(
                   text: " *",
-                  style: TextStyle(color: Colors.red, fontSize: 20),
+                  // Change: Merged titleStyle with additional styles if provided
+                  style: titleStyle?.merge(
+                          const TextStyle(color: Colors.red, fontSize: 20)) ??
+                      const TextStyle(color: Colors.red, fontSize: 20),
                 )
               else
                 const TextSpan()
@@ -533,7 +589,11 @@ class FormHelperRadio extends FormHelperField {
           options: option.keys
               .map((e) => FormBuilderChipOption(
                     value: option[e],
-                    child: Text(e),
+                    child: Text(
+                      e,
+                      // Change: Used optionStyle if provided, otherwise use default style
+                      style: optionStyle,
+                    ),
                   ))
               .toList(),
         ),

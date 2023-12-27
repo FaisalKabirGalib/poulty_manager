@@ -10,7 +10,6 @@ import 'package:styled_widget/styled_widget.dart';
 import '../../../../config/constant/constant.dart';
 import '../../../../config/theme/color.dart';
 import '../../../../gen/assets.gen.dart';
-import '../../../vaccine/presentation/style/functions.dart';
 
 class SignInInitial extends HookConsumerWidget {
   const SignInInitial({
@@ -59,7 +58,7 @@ class SignInInitial extends HookConsumerWidget {
           ),
           filled: true,
           fillColor: const Color(0XFFF3F4F6),
-          prefixIcon: Assets.icons.emailIcon.image(
+          prefixIcon: Assets.images.emailIcon.image(
             color: AppColors.black2Color,
             width: 20,
             height: 20,
@@ -110,7 +109,7 @@ class SignInInitial extends HookConsumerWidget {
                 }),
           filled: true,
           fillColor: const Color(0XFFF3F4F6),
-          prefixIcon: Assets.icons.passwordLock.image(
+          prefixIcon: Assets.images.passwordLock.image(
             color: AppColors.black2Color,
             width: 20,
             height: 20,

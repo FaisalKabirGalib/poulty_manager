@@ -1,13 +1,15 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:form_helper/form_helper.dart';
+import 'package:go_router/go_router.dart';
 import 'package:poulty_manager/config/constant/constant.dart';
 import 'package:poulty_manager/core/Layout/extension.dart';
-import 'package:poulty_manager/feature/auth/style/style.dart';
-import 'package:poulty_manager/feature/vaccine/presentation/style/functions.dart';
+import '../../vaccine/presentation/style/functions.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../config/theme/color.dart';
+import '../../../gen/assets.gen.dart';
 
 class AccountCompletePage extends HookWidget {
   const AccountCompletePage({super.key, required this.onRegister});
@@ -30,23 +32,50 @@ class AccountCompletePage extends HookWidget {
         flex: 1,
       ),
       Styled.text("অ্যাকাউন্ট সম্পন্ন করুন")
-          .fontSize(18)
-          .bold()
+          .fontSize(20)
+          .fontWeight(FontWeight.w600)
           .textAlignment(TextAlign.center)
-          .textColor(Colors.grey.shade800),
+          .textColor(AppColors.blackColor),
       KSized.h12,
       Styled.text("আপনার অ্যাকাউন্ট তৈরি করতে নিচের প্রয়োজনীয় তথ্যগুলো দিন।")
-          .fontSize(14)
+          .fontSize(16)
+          .fontWeight(FontWeight.w500)
           .textAlignment(TextAlign.center)
-          .textColor(Colors.grey.shade500),
+          .textColor(AppColors.black2Color)
+          .constrained(
+            width: MediaQuery.of(context).size.width * 0.9,
+          ),
+      KSized.h12,
+      KSized.h12,
       FormHelperTextField(
         "name",
         title: "name",
         controller: nameController,
         noTitleApply: true,
-        decoration: defaultFormDecoration.copyWith(
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: AppColors.primaryColor),
+          ),
           hintText: "আপনার পুরো নাম",
-          prefixIcon: const Icon(Icons.person_outline, color: Colors.grey),
+          prefixIcon: Assets.images.personOutline.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
+          filled: true,
+          fillColor: const Color(0XFFF3F4F6),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ).toWidget,
       KSized.h12,
@@ -57,9 +86,30 @@ class AccountCompletePage extends HookWidget {
         noTitleApply: true,
         obscureText: true,
         maxLine: 1,
-        decoration: defaultFormDecoration.copyWith(
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: AppColors.primaryColor),
+          ),
           hintText: "পাসওয়ার্ড",
-          prefixIcon: const Icon(Icons.lock_outline, color: Colors.grey),
+          prefixIcon: Assets.images.passwordLock.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
+          filled: true,
+          fillColor: const Color(0XFFF3F4F6),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ).toWidget,
       KSized.h12,
@@ -71,9 +121,30 @@ class AccountCompletePage extends HookWidget {
         controller: conformController,
         noTitleApply: true,
         maxLine: 1,
-        decoration: defaultFormDecoration.copyWith(
-          hintText: "কনফার্ম পাসওয়ার্ড",
-          prefixIcon: const Icon(Icons.lock_outline, color: Colors.grey),
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: AppColors.primaryColor),
+          ),
+          hintText: "পাসওয়ার্ড নিশ্চিত করুন",
+          prefixIcon: Assets.images.passwordLock.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
+          filled: true,
+          fillColor: const Color(0XFFF3F4F6),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ).toWidget,
       KSized.h12,
@@ -82,9 +153,30 @@ class AccountCompletePage extends HookWidget {
         title: "ref_id",
         controller: refIdController,
         noTitleApply: true,
-        decoration: defaultFormDecoration.copyWith(
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: const BorderSide(color: AppColors.primaryColor),
+          ),
           hintText: "রেফারেল আইডি (যদি থাকে)",
-          prefixIcon: const Icon(Icons.email_sharp, color: Colors.grey),
+          prefixIcon: Assets.images.callIcon.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
+          filled: true,
+          fillColor: const Color(0XFFF3F4F6),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ).toWidget,
       KSized.h12,
@@ -93,12 +185,20 @@ class AccountCompletePage extends HookWidget {
         title: "আপনি একজন?",
         onChanged: (value) => userType.value = value,
         option: {"খামারি": "1", "ক্রেতা": "0", "টিম মেম্বার": "2"},
-      ).toWidget.padding(
-            left: 10,
-          ),
-      KSized.h10,
+        titleStyle: const TextStyle(
+          color: AppColors.black2Color,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
+        optionStyle: const TextStyle(
+          color: AppColors.blackColor,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
+      ).toWidget.padding(left: 10),
       [
         Checkbox(
+          activeColor: AppColors.primaryColor,
           value: isChecked.value,
           onChanged: (val) {
             isChecked.value = !isChecked.value;
@@ -107,21 +207,24 @@ class AccountCompletePage extends HookWidget {
         RichText(
           text: const TextSpan(
             text: "I accept ",
-            style: TextStyle(color: Colors.grey, fontSize: 12),
+            style: TextStyle(color: AppColors.black2Color, fontSize: 12),
             children: [
               TextSpan(
                 text: "Terms and conditions",
-                style: TextStyle(color: AppColors.primaryColor),
+                style: TextStyle(
+                    color: AppColors.primaryColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600),
               ),
               TextSpan(
                 text: " & privacy policy ",
+                style: TextStyle(color: AppColors.black2Color, fontSize: 12),
               )
             ],
           ),
         ).expanded(),
-      ].toRow(),
-      KSized.h12,
-      KSized.h12,
+      ].toRow(mainAxisAlignment: MainAxisAlignment.start),
+      KSized.h10,
       ElevatedButton(
         onPressed: () {
           //if any controller or value is empty , password and confirm password is not match and isCheck is false then return
@@ -130,7 +233,7 @@ class AccountCompletePage extends HookWidget {
               refIdController.text.isEmpty ||
               userType.value == null ||
               !isChecked.value) {
-            // show snakebar
+            // show snack-bar
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text("সব তথ্য দিন"),
@@ -161,18 +264,41 @@ class AccountCompletePage extends HookWidget {
           // call onRegister function
         },
         style: primaryBtnStyle,
-        child: Styled.text("অ্যাকাউন্টে তৈরি করুন").textColor(Colors.white),
-      ).width(double.infinity).padding(
-            horizontal: 10,
-          ),
+        child: Styled.text("অ্যাকাউন্টে তৈরি করুন")
+            .fontSize(18)
+            .fontWeight(FontWeight.w600)
+            .textColor(Colors.white),
+      ).width(double.infinity),
+      KSized.h10,
+      RichText(
+        text: TextSpan(
+          text: "আগে থেকেই অ্যাকাউন্ট রয়েছে ? ",
+          style: const TextStyle(
+              color: AppColors.black2Color,
+              fontWeight: FontWeight.w400,
+              fontSize: 16),
+          children: [
+            TextSpan(
+              text: " প্রবেশ করুন",
+              style: const TextStyle(
+                  color: AppColors.primaryColor,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  context.go('/auth/login');
+                },
+            )
+          ],
+        ),
+      ),
       const Spacer(
         flex: 2,
       ),
     ]
         .toColumn()
-        .height(
-          MediaQuery.of(context).size.height,
-        )
-        .parent(blankPage);
+        .height(MediaQuery.of(context).size.height)
+        .padding(all: 20)
+        .scrollable();
   }
 }

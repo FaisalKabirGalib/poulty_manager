@@ -52,10 +52,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/call.svg
   SvgGenImage get call => const SvgGenImage('assets/icons/call.svg');
 
-  /// File path: assets/icons/call_icon.png
-  AssetGenImage get callIcon =>
-      const AssetGenImage('assets/icons/call_icon.png');
-
   /// File path: assets/icons/cart.svg
   SvgGenImage get cart => const SvgGenImage('assets/icons/cart.svg');
 
@@ -70,10 +66,6 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/edit.svg
   SvgGenImage get edit => const SvgGenImage('assets/icons/edit.svg');
-
-  /// File path: assets/icons/email_icon.png
-  AssetGenImage get emailIcon =>
-      const AssetGenImage('assets/icons/email_icon.png');
 
   /// File path: assets/icons/eye-hidden.svg
   SvgGenImage get eyeHidden => const SvgGenImage('assets/icons/eye-hidden.svg');
@@ -134,10 +126,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/password.svg
   SvgGenImage get password => const SvgGenImage('assets/icons/password.svg');
 
-  /// File path: assets/icons/password_lock.png
-  AssetGenImage get passwordLock =>
-      const AssetGenImage('assets/icons/password_lock.png');
-
   /// File path: assets/icons/phone.svg
   SvgGenImage get phone => const SvgGenImage('assets/icons/phone.svg');
 
@@ -178,7 +166,7 @@ class $AssetsIconsGen {
   SvgGenImage get weight => const SvgGenImage('assets/icons/weight.svg');
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<SvgGenImage> get values => [
         alertDialogHeader,
         amarTakaCard1,
         amarTakaCard2,
@@ -189,13 +177,11 @@ class $AssetsIconsGen {
         appHen,
         appShortLogo,
         call,
-        callIcon,
         cart,
         chicken,
         closeMark,
         delete,
         edit,
-        emailIcon,
         eyeHidden,
         eye,
         facebook,
@@ -214,7 +200,6 @@ class $AssetsIconsGen {
         noti,
         otpIcon,
         password,
-        passwordLock,
         phone,
         play,
         rightMark,
@@ -263,6 +248,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/book.png
   AssetGenImage get book => const AssetGenImage('assets/images/book.png');
 
+  /// File path: assets/images/call_icon.png
+  AssetGenImage get callIcon =>
+      const AssetGenImage('assets/images/call_icon.png');
+
   /// File path: assets/images/dealer-list.png
   AssetGenImage get dealerList =>
       const AssetGenImage('assets/images/dealer-list.png');
@@ -273,6 +262,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/doctor.png
   AssetGenImage get doctor => const AssetGenImage('assets/images/doctor.png');
+
+  /// File path: assets/images/email_icon.png
+  AssetGenImage get emailIcon =>
+      const AssetGenImage('assets/images/email_icon.png');
 
   /// File path: assets/images/farm-control.png
   AssetGenImage get farmControl =>
@@ -325,6 +318,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/no_khamar.png
   AssetGenImage get noKhamar =>
       const AssetGenImage('assets/images/no_khamar.png');
+
+  /// File path: assets/images/password_lock.png
+  AssetGenImage get passwordLock =>
+      const AssetGenImage('assets/images/password_lock.png');
+
+  /// File path: assets/images/person-outline.png
+  AssetGenImage get personOutline =>
+      const AssetGenImage('assets/images/person-outline.png');
 
   /// File path: assets/images/play.png
   AssetGenImage get play => const AssetGenImage('assets/images/play.png');
@@ -390,9 +391,11 @@ class $AssetsImagesGen {
         bikroyOntorvukti,
         bikroyOnurodh,
         book,
+        callIcon,
         dealerList,
         doctorList,
         doctor,
+        emailIcon,
         farmControl,
         farmReporting,
         farmacyList,
@@ -407,6 +410,8 @@ class $AssetsImagesGen {
         kroyOntorvukti,
         logo,
         noKhamar,
+        passwordLock,
+        personOutline,
         play,
         poultryMarket,
         poultryNews,
