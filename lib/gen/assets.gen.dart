@@ -52,6 +52,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/call.svg
   SvgGenImage get call => const SvgGenImage('assets/icons/call.svg');
 
+  /// File path: assets/icons/call_icon.png
+  AssetGenImage get callIcon =>
+      const AssetGenImage('assets/icons/call_icon.png');
+
   /// File path: assets/icons/cart.svg
   SvgGenImage get cart => const SvgGenImage('assets/icons/cart.svg');
 
@@ -182,6 +186,7 @@ class $AssetsIconsGen {
         appHen,
         appShortLogo,
         call,
+        callIcon,
         cart,
         chicken,
         closeMark,

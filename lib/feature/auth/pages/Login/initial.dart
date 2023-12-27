@@ -58,7 +58,7 @@ class SignInInitial extends HookConsumerWidget {
             fontWeight: FontWeight.w500,
           ),
           filled: true,
-          fillColor: Colors.grey[100],
+          fillColor: const Color(0XFFF3F4F6),
           prefixIcon: Assets.icons.emailIcon.image(
             color: AppColors.black2Color,
             width: 20,
@@ -109,7 +109,7 @@ class SignInInitial extends HookConsumerWidget {
                   showPassword.value = !showPassword.value;
                 }),
           filled: true,
-          fillColor: Colors.grey[100],
+          fillColor: const Color(0XFFF3F4F6),
           prefixIcon: Assets.icons.passwordLock.image(
             color: AppColors.black2Color,
             width: 20,
@@ -240,7 +240,7 @@ class SignInInitial extends HookConsumerWidget {
             .toRow()
             .padding(all: 10)
             .decorated(
-              color: Colors.grey[100],
+              color: AppColors.white3Color,
               borderRadius: BorderRadius.circular(16),
             )
             .constrained(

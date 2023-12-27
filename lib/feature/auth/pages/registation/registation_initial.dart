@@ -29,18 +29,21 @@ class RegistrationInitial extends HookWidget {
       Assets.images.appHen.image(),
       KSized.h10,
       Styled.text("নিবন্ধন করুন")
-          .fontSize(18)
-          .bold()
-          .textColor(Colors.grey.shade800),
+          .fontSize(20)
+          .fontWeight(FontWeight.w600)
+          .textColor(AppColors.blackColor),
       KSized.h10,
 
       Styled.text("আপনার অ্যাকাউন্ট তৈরি করতে নিচের প্রয়োজনীয় তথ্যগুলো দিন।")
           .textAlignment(TextAlign.center)
-          .textColor(Colors.grey.shade500)
+          .fontSize(16)
+          .fontWeight(FontWeight.w400)
+          .textColor(AppColors.black2Color)
           .alignment(Alignment.center)
           .constrained(
-            width: MediaQuery.of(context).size.width * 0.8,
+            width: MediaQuery.of(context).size.width * 0.9,
           ),
+      KSized.h10,
       KSized.h10,
       KSized.h10,
 
@@ -50,21 +53,33 @@ class RegistrationInitial extends HookWidget {
         title: "ইমেইল",
         noTitleApply: true,
         decoration: InputDecoration(
-          enabledBorder: InputBorder.none,
-          hintText: "মোবাইল নাম্বার",
-          filled: true,
-          fillColor: Colors.grey[100],
-          prefixIcon: const Icon(Icons.phone_android, color: Colors.grey),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide.none,
+          ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: const BorderSide(color: AppColors.primaryColor),
           ),
+          hintText: "মোবাইল নাম্বার",
+          prefixIcon: Assets.icons.callIcon.image(
+            color: AppColors.black2Color,
+            width: 20,
+            height: 20,
+          ),
+          hintStyle: const TextStyle(
+              color: AppColors.black2Color,
+              fontSize: 16,
+              fontWeight: FontWeight.w500),
+          filled: true,
+          fillColor: const Color(0XFFF3F4F6),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-      ).toWidget.padding(horizontal: 10),
+      ).toWidget.padding(horizontal: 20),
 
+      KSized.h10,
       KSized.h10,
       KSized.h10,
       ElevatedButton(
@@ -82,17 +97,37 @@ class RegistrationInitial extends HookWidget {
           }
           onRegistration("88${phoneController.text}");
         },
-        child: Styled.text("পরবর্তী").fontSize(14).textColor(Colors.white),
+        child: [
+          Styled.text("পরবর্তী")
+              .fontSize(18)
+              .fontWeight(FontWeight.w600)
+              .textColor(Colors.white),
+          KSized.w4,
+          const Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+            size: 20,
+          ),
+        ].toRow(
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
       ).width(double.infinity).padding(horizontal: 20),
+      KSized.h10,
       KSized.h10,
       RichText(
         text: TextSpan(
           text: "আগে থেকেই অ্যাকাউন্ট রয়েছে ? ",
-          style: const TextStyle(color: Colors.grey),
+          style: const TextStyle(
+              color: AppColors.black2Color,
+              fontWeight: FontWeight.w400,
+              fontSize: 16),
           children: [
             TextSpan(
               text: " প্রবেশ করুন",
-              style: const TextStyle(color: AppColors.primaryColor),
+              style: const TextStyle(
+                  color: AppColors.primaryColor,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   context.go('/auth/login');
@@ -102,39 +137,76 @@ class RegistrationInitial extends HookWidget {
         ),
       ),
       KSized.h10,
+      KSized.h10,
 
       // MAKE A OR DIVIDER
       [
         KSized.w12,
-        const Divider().expanded(),
+        const Divider(
+          color: AppColors.black3Color,
+        ).expanded(),
         KSized.w12,
-        Styled.text("অথবা").alignment(Alignment.center),
+        Styled.text("অথবা")
+            .fontSize(14)
+            .textColor(
+              AppColors.black2Color,
+            )
+            .alignment(Alignment.center),
         KSized.w12,
-        const Divider().expanded(),
+        const Divider(
+          color: AppColors.black3Color,
+        ).expanded(),
         KSized.w12,
       ].toRow(),
+      KSized.h10,
       KSized.h10,
       // GOOGLE SIGN IN BUTTON
       [
         [
-          Styled.icon(Icons.facebook),
+          Assets.icons.facebookIcon.svg(
+            height: 30,
+            width: 30,
+          ),
           KSized.w10,
-          Styled.text("Facebook").textColor(Colors.grey)
+          Styled.text("Facebook")
+              .textColor(const Color(0XFF61677D))
+              .fontSize(16)
+              .fontWeight(FontWeight.w500)
 
           // FACEBOOK SIGN IN BUTTON
-        ].toRow().padding(all: 10).decorated(
-              color: Colors.grey[100],
+        ]
+            .toRow()
+            .padding(all: 10)
+            .decorated(
+              color: AppColors.white3Color,
               borderRadius: BorderRadius.circular(16),
+            )
+            .constrained(
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: 60,
             ),
         [
-          Styled.icon(Icons.gamepad_rounded),
+          Assets.icons.googleIcon.svg(
+            height: 30,
+            width: 30,
+          ),
           KSized.w10,
-          Styled.text("Google").textColor(Colors.grey)
+          Styled.text("Google")
+              .textColor(const Color(0XFF61677D))
+              .fontSize(16)
+              .fontWeight(FontWeight.w500)
 
           // FACEBOOK SIGN IN BUTTON
-        ].toRow().padding(all: 10).decorated(
-              color: Colors.grey[100],
+        ]
+            .toRow()
+            .padding(all: 10)
+            .decorated(
+              color: AppColors.white3Color,
               borderRadius: BorderRadius.circular(16),
+            )
+            .constrained(
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: 60,
             ),
       ].toRow(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
