@@ -128,6 +128,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/noti.svg
   SvgGenImage get noti => const SvgGenImage('assets/icons/noti.svg');
 
+  /// File path: assets/icons/otp_icon.svg
+  SvgGenImage get otpIcon => const SvgGenImage('assets/icons/otp_icon.svg');
+
   /// File path: assets/icons/password.svg
   SvgGenImage get password => const SvgGenImage('assets/icons/password.svg');
 
@@ -209,6 +212,7 @@ class $AssetsIconsGen {
         menuMarket,
         menuReport,
         noti,
+        otpIcon,
         password,
         passwordLock,
         phone,
