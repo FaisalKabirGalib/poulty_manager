@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:poulty_manager/config/config.dart';
-import 'package:poulty_manager/config/constant/constant.dart';
+import '../../../config/config.dart';
+import '../../../config/constant/constant.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../gen/assets.gen.dart';
@@ -14,6 +13,7 @@ class DialogHelper {
     String transactionId,
     String date,
   ) {
+    // Show Dialog
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -119,6 +119,102 @@ class DialogHelper {
                 )
               ],
             ),
+          ),
+        );
+      },
+    );
+  }
+
+  // Coming Soon Alert Dialog
+  static void showComingSoonDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          shadowColor: Colors.grey.shade200,
+          elevation: 0,
+          content: Stack(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: MediaQuery.of(context).size.width * 0.8,
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 120,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: AppColors.primaryColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              // Use the provided image for "Coming Soon"
+                              Assets.images.workInProgress.image(
+                                height: 60,
+                                width: 60,
+                                fit: BoxFit.cover,
+                              ),
+                              KSized.h8,
+                              Styled.text('Coming Soon')
+                                  .fontSize(16)
+                                  .fontWeight(FontWeight.bold)
+                                  .textColor(AppColors.whiteColor),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    KSized.h8,
+                    KSized.h8,
+
+                    // Details
+                    Align(
+                      heightFactor: 1.5,
+                      alignment: Alignment.center,
+                      child: Column(
+                        children: [
+                          Styled.text('Stay tuned for exciting updates!')
+                              .textColor(AppColors.blackColor)
+                              .fontSize(18)
+                              .fontWeight(FontWeight.bold),
+                          KSized.h8,
+                          Styled.text('We are working on something awesome.')
+                              .fontSize(14)
+                              .textColor(AppColors.black2Color),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 8,
+                right: 8,
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.close_rounded,
+                    color: AppColors.whiteColor,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Close the dialog
+                  },
+                ),
+              ),
+            ],
           ),
         );
       },

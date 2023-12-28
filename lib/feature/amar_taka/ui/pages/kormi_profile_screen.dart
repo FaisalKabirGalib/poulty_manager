@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/feature/auth/pages/forget_password.dart';
 import '../../../../gen/assets.gen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
@@ -74,9 +73,9 @@ class KormiProfileScreen extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 // TODO: Delete kormi
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const ForgetPasswordInitial();
-                }));
+                // Navigator.push(context, MaterialPageRoute(builder: (context) {
+                //   return const ForgetPasswordInitial();
+                // }));
               },
               style: ElevatedButton.styleFrom(
                 elevation: 0,

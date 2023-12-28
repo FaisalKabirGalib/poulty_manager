@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:poulty_manager/gen/assets.gen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
+import '../config/theme/color.dart';
+
 interface class ImageWithText {
   final Widget image;
   final Widget text;
@@ -60,6 +62,12 @@ extension GridHelper on List<ImageWithText> {
   }) {
     return Card(
       color: Colors.white,
+      elevation: 1,
+      shadowColor: Colors.grey[200],
+      surfaceTintColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

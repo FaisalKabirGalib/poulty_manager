@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:styled_widget/styled_widget.dart';
 
+import '../../../../../config/theme/color.dart';
 import '/core/widget/async/async_value_widget.dart';
 import '/feature/batch/presentation/widgets/batch_item.dart';
 import '/feature/firm/ui/controller/controller.dart';
@@ -44,6 +45,10 @@ class BatchMainHome extends HookConsumerWidget {
             bottom: 10,
             right: 10,
             child: FloatingActionButton(
+              elevation: 0,
+              shape: const CircleBorder(),
+              backgroundColor: AppColors.primaryColor,
+              foregroundColor: AppColors.whiteColor,
               onPressed: () {
                 context.push("/firm/$firmId/batch/new");
               },

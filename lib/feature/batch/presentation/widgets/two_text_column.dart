@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/config/constant/constant.dart';
+import '../../../../config/constant/constant.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '/config/config.dart';
@@ -30,7 +30,9 @@ class TwoTextColumn extends StatelessWidget {
               vertical: 6,
             ),
             color: AppColors.primaryColor,
-            child: Styled.text(lowerText).fontSize(12),
+            child: Styled.text(lowerText)
+                .textColor(AppColors.whiteColor)
+                .fontSize(12),
           ),
         ),
       ],
@@ -49,30 +51,40 @@ class BatchSmallCardShow extends StatelessWidget {
     required this.title,
     required this.value,
     required this.image,
+    required this.backgroundImage,
   }) : super(key: key);
   final String title;
   final String value;
   final Widget image;
+  final Widget backgroundImage;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(color: AppColors.primaryColor),
+        color: Colors.white,
       ),
       child: [
         const SizedBox(
           width: 4,
         ),
         [
-          Styled.text(title).fontSize(12).fittedBox(),
-          Styled.text(value).fontSize(14).textColor(Colors.grey[500]),
+          Styled.text(title)
+              .fontSize(12)
+              .fontWeight(FontWeight.w500)
+              .fittedBox(),
+          Styled.text(value)
+              .fontSize(12.5)
+              .fontWeight(FontWeight.w500)
+              .textColor(Colors.grey[500])
+              .fittedBox(),
         ].toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center),
         KSized.w4,
-        image.expanded(),
+        image.height(30).width(30),
         KSized.w4,
       ].toRow(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,5 +106,5 @@ class BatchSmallCardShow extends StatelessWidget {
 //           )
 //           .constrained(
 //             minHeight: 40,
-            
+
 //           ),

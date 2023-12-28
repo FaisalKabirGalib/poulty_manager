@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
+import 'package:poulty_manager/feature/shared/components/dialog_helper.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '/config/constant/constant.dart';
@@ -146,7 +147,7 @@ class BatchExpand extends StatelessWidget {
             )
             .constrained(minHeight: 40, maxHeight: 60),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 24, left: 8, right: 8),
           child: GridView.count(
             shrinkWrap: true,
             primary: false,
@@ -159,86 +160,178 @@ class BatchExpand extends StatelessWidget {
                 title: "মোট জীবিত মুরগী",
                 value: batch.totalAliveChicks,
                 image: Assets.icons.henOutline.svg(),
+                backgroundImage: Assets.icons.bmCardBg1.svg(),
               ),
               BatchSmallCardShow(
                 title: "মুর্গির গড় ওজন",
                 value: batch.avgWeight,
                 image: Assets.icons.weight.svg(),
+                backgroundImage: Assets.icons.bmCardBg2.svg(),
               ),
               BatchSmallCardShow(
                 title: "উৎপাদন ব্যায় (কেজি)",
                 value: batch.manufactureCostKg,
                 image: Assets.icons.uppadon.svg(),
+                backgroundImage: Assets.icons.bmCardBg3.svg(),
               ),
               BatchSmallCardShow(
                 title: "মোট ব্যায়",
                 value: batch.totalCost,
                 image: Assets.icons.totalBai.svg(),
+                backgroundImage: Assets.icons.bmCardBg4.svg(),
               ),
             ],
           ),
         ),
 
+        KSized.h12,
+
         // gRID
         [
           CreateGridItem(
-            image: Assets.images.rogPotikar.image(
+            image: Assets.images.totthoHalnagad.image(
               height: 50,
             ),
-            text: Styled.text("তথ্য হালনাগাদ").fontSize(10),
+            text: Styled.text("তথ্য হালনাগাদ")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/info-update/${batch.id}");
             },
           ),
           CreateGridItem(
-            image: Assets.images.amarTaka.image(
+            image: Assets.images.doctorVisit.image(
               height: 50,
             ),
-            text: Styled.text("ডাক্তার ভিজিট").fontSize(10),
+            text: Styled.text("ডাক্তার ভিজিট")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/doctor-visit/${batch.id}");
             },
           ),
           CreateGridItem(
-            image: Assets.images.allCalculator.image(
+            image: Assets.images.poramorshoProtidin.image(
               height: 50,
             ),
-            text: Styled.text("পরামর্শ প্রতিদিন").fontSize(10),
+            text: Styled.text("পরামর্শ প্রতিদিন")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/daily-advice/${batch.id}");
             },
           ),
           CreateGridItem(
-            image: Assets.images.bazarBisleshon.image(
+            image: Assets.images.vaccineTottho.image(
               height: 50,
             ),
-            text: Styled.text("ভ্যাক্সিন").fontSize(10),
+            text: Styled.text("ভ্যাক্সিন তথ্য")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/vaccine/${batch.id}");
             },
           ),
           CreateGridItem(
-            image: Assets.images.farmControl.image(
+            image: Assets.images.finalReport.image(
               height: 50,
             ),
-            text: Styled.text("ফাইনাল রিপোর্ট").fontSize(10),
+            text: Styled.text("ফাইনাল রিপোর্ট")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/report/${batch.id}");
             },
           ),
           CreateGridItem(
-            image: Assets.images.kroyOntorvukti.image(
+            image: Assets.images.osudhShomoysuchi.image(
               height: 50,
             ),
-            text: Styled.text("ঔষধের সময়সুচি").fontSize(8),
+            text: Styled.text("ঔষধের সময়সুচি")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
             onPressed: () {
               context.push("/medicine/${batch.id}");
             },
+          ),
+          CreateGridItem(
+            image: Assets.images.kroyOntorvhukti.image(
+              height: 50,
+            ),
+            text: Styled.text("ক্রয় ও অন্তর্ভুক্তি")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.folafolMullayon.image(
+              height: 50,
+            ),
+            text: Styled.text("ফলাফল মূল্যায়ন")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.khabarerMojud.image(
+              height: 50,
+            ),
+            text: Styled.text("খামারের মজুদ")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.batchAccount.image(
+              height: 50,
+            ),
+            text: Styled.text("ব্যাচ একাউন্ট")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.bikroyKorun.image(
+              height: 50,
+            ),
+            text: Styled.text("বিক্রয় করুন")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.bikroykariTottho.image(
+              height: 50,
+            ),
+            text: Styled.text("বিক্রয়কারী তথ্য")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {
+              DialogHelper.showComingSoonDialog(context);
+            },
+          ),
+          CreateGridItem(
+            image: Assets.images.dimSongroho.image(),
+            text: Styled.text("ডিম সংগ্রহ")
+                .fontSize(10)
+                .fontWeight(FontWeight.w500),
+            onPressed: () {},
           ),
         ].grid(
           primary: true,
           shrinkWrap: true,
         ),
+
         Styled.icon(Icons.arrow_upward)
             .decorated(
               color: Colors.grey.shade300,
@@ -248,8 +341,6 @@ class BatchExpand extends StatelessWidget {
               onTap: onTap,
             ),
       ],
-    ).card(
-      color: Colors.white,
-    );
+    ).card(color: Colors.white);
   }
 }

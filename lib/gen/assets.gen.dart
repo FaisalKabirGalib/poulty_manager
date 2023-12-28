@@ -49,6 +49,22 @@ class $AssetsIconsGen {
   SvgGenImage get appShortLogo =>
       const SvgGenImage('assets/icons/app-short-logo.svg');
 
+  /// File path: assets/icons/bm_card_bg1.svg
+  SvgGenImage get bmCardBg1 =>
+      const SvgGenImage('assets/icons/bm_card_bg1.svg');
+
+  /// File path: assets/icons/bm_card_bg2.svg
+  SvgGenImage get bmCardBg2 =>
+      const SvgGenImage('assets/icons/bm_card_bg2.svg');
+
+  /// File path: assets/icons/bm_card_bg3.svg
+  SvgGenImage get bmCardBg3 =>
+      const SvgGenImage('assets/icons/bm_card_bg3.svg');
+
+  /// File path: assets/icons/bm_card_bg4.svg
+  SvgGenImage get bmCardBg4 =>
+      const SvgGenImage('assets/icons/bm_card_bg4.svg');
+
   /// File path: assets/icons/call.svg
   SvgGenImage get call => const SvgGenImage('assets/icons/call.svg');
 
@@ -176,6 +192,10 @@ class $AssetsIconsGen {
         amarTakaOption3,
         appHen,
         appShortLogo,
+        bmCardBg1,
+        bmCardBg2,
+        bmCardBg3,
+        bmCardBg4,
         call,
         cart,
         chicken,
@@ -233,6 +253,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/app-hen.png
   AssetGenImage get appHen => const AssetGenImage('assets/images/app-hen.png');
 
+  /// File path: assets/images/batch_account.png
+  AssetGenImage get batchAccount =>
+      const AssetGenImage('assets/images/batch_account.png');
+
   /// File path: assets/images/bazar-bisleshon.png
   AssetGenImage get bazarBisleshon =>
       const AssetGenImage('assets/images/bazar-bisleshon.png');
@@ -244,6 +268,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/bikroy-onurodh.png
   AssetGenImage get bikroyOnurodh =>
       const AssetGenImage('assets/images/bikroy-onurodh.png');
+
+  /// File path: assets/images/bikroy_korun.png
+  AssetGenImage get bikroyKorun =>
+      const AssetGenImage('assets/images/bikroy_korun.png');
+
+  /// File path: assets/images/bikroykari_tottho.png
+  AssetGenImage get bikroykariTottho =>
+      const AssetGenImage('assets/images/bikroykari_tottho.png');
 
   /// File path: assets/images/book.png
   AssetGenImage get book => const AssetGenImage('assets/images/book.png');
@@ -260,12 +292,20 @@ class $AssetsImagesGen {
   AssetGenImage get dealerList =>
       const AssetGenImage('assets/images/dealer-list.png');
 
+  /// File path: assets/images/dim_songroho.png
+  AssetGenImage get dimSongroho =>
+      const AssetGenImage('assets/images/dim_songroho.png');
+
   /// File path: assets/images/doctor-list.png
   AssetGenImage get doctorList =>
       const AssetGenImage('assets/images/doctor-list.png');
 
   /// File path: assets/images/doctor.png
   AssetGenImage get doctor => const AssetGenImage('assets/images/doctor.png');
+
+  /// File path: assets/images/doctor_visit.png
+  AssetGenImage get doctorVisit =>
+      const AssetGenImage('assets/images/doctor_visit.png');
 
   /// File path: assets/images/email_icon.png
   AssetGenImage get emailIcon =>
@@ -283,6 +323,14 @@ class $AssetsImagesGen {
   AssetGenImage get farmacyList =>
       const AssetGenImage('assets/images/farmacy-list.png');
 
+  /// File path: assets/images/final_report.png
+  AssetGenImage get finalReport =>
+      const AssetGenImage('assets/images/final_report.png');
+
+  /// File path: assets/images/folafol_mullayon.png
+  AssetGenImage get folafolMullayon =>
+      const AssetGenImage('assets/images/folafol_mullayon.png');
+
   /// File path: assets/images/forget_pass_icon.png
   AssetGenImage get forgetPassIcon =>
       const AssetGenImage('assets/images/forget_pass_icon.png');
@@ -299,6 +347,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/inbox.png
   AssetGenImage get inbox => const AssetGenImage('assets/images/inbox.png');
+
+  /// File path: assets/images/khabar_mojud.png
+  AssetGenImage get khabarMojud =>
+      const AssetGenImage('assets/images/khabar_mojud.png');
 
   /// File path: assets/images/khabarer-mojud.png
   AssetGenImage get khabarerMojud =>
@@ -320,12 +372,20 @@ class $AssetsImagesGen {
   AssetGenImage get kroyOntorvukti =>
       const AssetGenImage('assets/images/kroy-ontorvukti.png');
 
+  /// File path: assets/images/kroy_ontorvhukti.png
+  AssetGenImage get kroyOntorvhukti =>
+      const AssetGenImage('assets/images/kroy_ontorvhukti.png');
+
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
   /// File path: assets/images/no_khamar.png
   AssetGenImage get noKhamar =>
       const AssetGenImage('assets/images/no_khamar.png');
+
+  /// File path: assets/images/osudh_shomoysuchi.png
+  AssetGenImage get osudhShomoysuchi =>
+      const AssetGenImage('assets/images/osudh_shomoysuchi.png');
 
   /// File path: assets/images/password_lock.png
   AssetGenImage get passwordLock =>
@@ -337,6 +397,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/play.png
   AssetGenImage get play => const AssetGenImage('assets/images/play.png');
+
+  /// File path: assets/images/poramorsho_protidin.png
+  AssetGenImage get poramorshoProtidin =>
+      const AssetGenImage('assets/images/poramorsho_protidin.png');
 
   /// File path: assets/images/poultry-market.png
   AssetGenImage get poultryMarket =>
@@ -377,6 +441,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/setting.png
   AssetGenImage get setting => const AssetGenImage('assets/images/setting.png');
 
+  /// File path: assets/images/tottho_halnagad.png
+  AssetGenImage get totthoHalnagad =>
+      const AssetGenImage('assets/images/tottho_halnagad.png');
+
+  /// File path: assets/images/vaccine_tottho.png
+  AssetGenImage get vaccineTottho =>
+      const AssetGenImage('assets/images/vaccine_tottho.png');
+
   /// File path: assets/images/walkthrough_1.png
   AssetGenImage get walkthrough1 =>
       const AssetGenImage('assets/images/walkthrough_1.png');
@@ -389,40 +461,55 @@ class $AssetsImagesGen {
   AssetGenImage get walkthrough3 =>
       const AssetGenImage('assets/images/walkthrough_3.png');
 
+  /// File path: assets/images/work-in-progress.png
+  AssetGenImage get workInProgress =>
+      const AssetGenImage('assets/images/work-in-progress.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         affiliatePartner,
         allCalculator,
         amarTaka,
         appHen,
+        batchAccount,
         bazarBisleshon,
         bikroyOntorvukti,
         bikroyOnurodh,
+        bikroyKorun,
+        bikroykariTottho,
         book,
         callIcon,
         createFarmImage,
         dealerList,
+        dimSongroho,
         doctorList,
         doctor,
+        doctorVisit,
         emailIcon,
         farmControl,
         farmReporting,
         farmacyList,
+        finalReport,
+        folafolMullayon,
         forgetPassIcon,
         hello,
         hen,
         henVideo,
         inbox,
+        khabarMojud,
         khabarerMojud,
         khamarGhor,
         kormiList,
         kretaList,
         kroyOntorvukti,
+        kroyOntorvhukti,
         logo,
         noKhamar,
+        osudhShomoysuchi,
         passwordLock,
         personOutline,
         play,
+        poramorshoProtidin,
         poultryMarket,
         poultryNews,
         poultryRin,
@@ -433,9 +520,12 @@ class $AssetsImagesGen {
         rogPotikar,
         sahajjerJonno,
         setting,
+        totthoHalnagad,
+        vaccineTottho,
         walkthrough1,
         walkthrough2,
-        walkthrough3
+        walkthrough3,
+        workInProgress
       ];
 }
 
