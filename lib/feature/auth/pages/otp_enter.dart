@@ -73,31 +73,20 @@ class OTPEnterScreen extends HookConsumerWidget {
           }
         },
         pinTheme: PinTheme(
-          // shape: PinCodeFieldShape.box,
-          // borderRadius: BorderRadius.circular(5),
-          // fieldWidth: 50,
-          // borderWidth: 1,
-          // inactiveColor: Colors.grey[300],
-          // activeColor: AppColors.primaryColor,
-          // selectedColor: AppColors.primaryColor,
           fieldHeight: 60,
           fieldWidth: 60,
           shape: PinCodeFieldShape.box,
           borderRadius: BorderRadius.circular(10),
           borderWidth: 1,
-
           inactiveFillColor: AppColors.primaryColor,
           activeFillColor: AppColors.primaryColor,
           selectedFillColor: AppColors.primaryColor,
-
           inactiveBorderWidth: 1,
           selectedBorderWidth: 2,
           activeBorderWidth: 2,
-
           activeColor: AppColors.primaryColor,
           inactiveColor: AppColors.primaryColor,
           selectedColor: AppColors.primaryColor,
-
           activeBoxShadow: [
             BoxShadow(
               color: AppColors.primaryColor.withOpacity(0.1),

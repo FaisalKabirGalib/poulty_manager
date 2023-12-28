@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:poulty_manager/feature/auth/pages/create_farm_page.dart';
 import '../../../../gen/assets.gen.dart';
-import '../../../intro_screens/introduction_screen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../config/constant/constant.dart';
@@ -75,7 +75,7 @@ class KormiProfileScreen extends StatelessWidget {
               onPressed: () {
                 // TODO: Delete kormi
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const IntroductionScreen();
+                  return const CreateNewFarmPage();
                 }));
               },
               style: ElevatedButton.styleFrom(

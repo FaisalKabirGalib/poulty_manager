@@ -252,6 +252,10 @@ class $AssetsImagesGen {
   AssetGenImage get callIcon =>
       const AssetGenImage('assets/images/call_icon.png');
 
+  /// File path: assets/images/create_farm_image.png
+  AssetGenImage get createFarmImage =>
+      const AssetGenImage('assets/images/create_farm_image.png');
+
   /// File path: assets/images/dealer-list.png
   AssetGenImage get dealerList =>
       const AssetGenImage('assets/images/dealer-list.png');
@@ -396,6 +400,7 @@ class $AssetsImagesGen {
         bikroyOnurodh,
         book,
         callIcon,
+        createFarmImage,
         dealerList,
         doctorList,
         doctor,

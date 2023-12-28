@@ -48,7 +48,7 @@ class IntroPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                context.goNamed(AppRouteName.register.name);
+                // context.goNamed(AppRouteName.register.name);
               },
               child: Styled.text('অ্যাপটি ঘুরে দেখুন')
                   .fontSize(20)
