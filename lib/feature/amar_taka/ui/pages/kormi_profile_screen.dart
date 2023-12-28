@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poulty_manager/feature/auth/pages/create_farm_page.dart';
+import 'package:poulty_manager/feature/auth/pages/forget_password.dart';
 import '../../../../gen/assets.gen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
@@ -75,7 +75,7 @@ class KormiProfileScreen extends StatelessWidget {
               onPressed: () {
                 // TODO: Delete kormi
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const CreateNewFarmPage();
+                  return const ForgetPasswordInitial();
                 }));
               },
               style: ElevatedButton.styleFrom(

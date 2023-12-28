@@ -6,8 +6,8 @@ import '../../../config/constant/constant.dart';
 import '../../../config/theme/color.dart';
 import '../../../gen/assets.gen.dart';
 
-class CreateNewFarmPage extends StatelessWidget {
-  const CreateNewFarmPage({super.key});
+class CreateNewFarmAlertPage extends StatelessWidget {
+  const CreateNewFarmAlertPage({super.key});
 
   @override
   Widget build(BuildContext context) {

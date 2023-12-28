@@ -50,7 +50,7 @@ class RegistrationInitial extends HookWidget {
       FormHelperTextField(
         "phone",
         controller: phoneController,
-        title: "ইমেইল",
+        title: "মোবাইল নাম্বার",
         noTitleApply: true,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
