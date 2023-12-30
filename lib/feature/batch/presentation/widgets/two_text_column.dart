@@ -22,7 +22,6 @@ class TwoTextColumn extends StatelessWidget {
         Container(
           child: Styled.text(uppertext).fontSize(12),
         ),
-        // take full parent width for this container
         Expanded(
           child: Container(
             padding: const EdgeInsets.symmetric(

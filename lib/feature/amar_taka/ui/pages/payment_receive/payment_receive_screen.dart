@@ -3,7 +3,7 @@ import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/batch_
 import 'package:poulty_manager/feature/amar_taka/ui/pages/payment_receive/beton_porishod_tabview.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/joma_tab_view.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/pages/joma_uttolon/uttolon_tab_view.dart';
-import 'package:poulty_manager/feature/shared/components/custom_tabbar.dart';
+import 'package:poulty_manager/utils/widgets/custom_tabbar.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../../core/Layout/extension.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../config/config.dart';
-import '../../../config/constant/constant.dart';
+import '../../config/config.dart';
+import '../../config/constant/constant.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../gen/assets.gen.dart';
+import '../../gen/assets.gen.dart';
 
 class DialogHelper {
   static void showAlertDialog(
