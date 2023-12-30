@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../../gen/assets.gen.dart';
+import '../../gen/assets.gen.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/constant/constant.dart';
-import '../../../../config/theme/color.dart';
-import '../../../../core/Layout/extension.dart';
+import '../../config/constant/constant.dart';
+import '../../config/theme/color.dart';
+import '../../core/Layout/extension.dart';
 
 class KormiProfileScreen extends StatelessWidget {
   const KormiProfileScreen({super.key});

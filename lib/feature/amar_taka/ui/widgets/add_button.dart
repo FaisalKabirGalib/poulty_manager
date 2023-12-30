@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/color.dart';
-import '../pages/kormi_list_screen.dart';
+import '../../../kormi_list/kormi_list_screen.dart';
 
 class AddButton extends StatelessWidget {
   const AddButton({

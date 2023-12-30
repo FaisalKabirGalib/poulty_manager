@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'kormi_profile_screen.dart';
 import 'user_profile_widget.dart';
-import '../widgets/add_button.dart';
+import '../amar_taka/ui/widgets/add_button.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/constant/constant.dart';
-import '../../../../core/Layout/extension.dart';
-import '../../../batch/presentation/functions/utils.dart';
+import '../../config/constant/constant.dart';
+import '../../core/Layout/extension.dart';
+import '../batch/presentation/functions/utils.dart';
 
 class KormiListDetailsScreen extends StatelessWidget {
   const KormiListDetailsScreen({super.key});

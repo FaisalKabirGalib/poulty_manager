@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:poulty_manager/config/constant/constant.dart';
-import 'package:poulty_manager/feature/amar_taka/ui/pages/kormi_list_details.dart';
+import 'package:poulty_manager/feature/kormi_list/kormi_list_details.dart';
 import 'package:poulty_manager/feature/amar_taka/ui/widgets/actions_buttons.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../../core/Layout/extension.dart';
-import '../../../batch/presentation/functions/utils.dart';
+import '../../../core/Layout/extension.dart';
+import '../batch/presentation/functions/utils.dart';
 
 class KormiListScreen extends StatelessWidget {
   const KormiListScreen({super.key});
